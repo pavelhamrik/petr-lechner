@@ -16,9 +16,8 @@ class Index extends Component {
     render() {
         return (
             <Layout title={`${SITE_TITLE} • ${SITE_SUBTITLE}`}>
-                <Heading level={1}>
-                    {`${SITE_TITLE} • ${SITE_SUBTITLE}`}
-                </Heading>
+                <Heading level={1} className='headline'>{SITE_TITLE} {SITE_SUBTITLE}</Heading>
+                <p>{SITE_SUBTITLE}</p>
                 {/*<div>Prop from Redux {this.props.foo}</div>*/}
                 {/*<div>Prop from getInitialProps {this.props.custom}</div>*/}
             </Layout>

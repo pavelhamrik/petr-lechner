@@ -11,3 +11,12 @@
         font-size: $size;
     }
 }
+
+.headline {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5rem;
+    color: $light-gray;
+    max-width: 45rem;
+    line-height: 1.2;
+}
