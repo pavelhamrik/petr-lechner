@@ -1,0 +1,17 @@
+@import '~sanitize.css/sanitize.css';
+
+@import 'settings';
+@import 'generic';
+
+//@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900|Kanit:400,700,800|Muli:400,700,900|Nunito+Sans:400,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+    font-size: $root-font-size;
+}
+
+body {
+    font-family: $font-family;
+    line-height: $line-height;
+}

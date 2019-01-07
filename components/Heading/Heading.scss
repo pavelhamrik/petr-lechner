@@ -1,0 +1,13 @@
+@import '../../styles/settings';
+//@import '../../styles/mixins/breakpoints';
+//@import '../../styles/mixins/responsive-attr';
+
+.h1,
+.h2,
+.h3 {}
+
+@each $heading, $size in $headings {
+    .#{$heading} {
+        font-size: $size;
+    }
+}
