@@ -7,6 +7,9 @@ import rootReducer from '../store/reducers';
 import '../styles/app.scss'
 import smoothscroll from 'smoothscroll-polyfill';
 import {ParallaxProvider} from 'react-scroll-parallax';
+import * as ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-9799491-13');
 
 // const makeStore = (initialState, options) => {
 const makeStore = (initialState) => {
@@ -22,7 +25,7 @@ class MyApp extends App {
         return {pageProps}
     }
 
-    componentDidMount() {
+    componentDidMount(props) {
         smoothscroll.polyfill();
     }
 

@@ -40,7 +40,7 @@ class ImageActual extends Component {
         const {className = '', src = '', alt = '', parallax, ...attrs} = this.props;
 
         if (typeof parallax === 'object' && !isEmptyObject(parallax)) {
-            const {xmin = 0, xmax = 0, ymin = 0, ymax = 0, color = 'transparent', slowerScrollRate = true} = parallax;
+            const {xmin = 0, xmax = 0, ymin = 0, ymax = 0, color = 'transparent', reverse = true} = parallax;
 
             return (
                 <div
@@ -55,7 +55,7 @@ class ImageActual extends Component {
                         offsetYMax={`${ymax}px`}
                         offsetXMin={`${xmin}px`}
                         offsetXMax={`${xmax}px`}
-                        slowerScrollRate={slowerScrollRate}
+                        slowerScrollRate={reverse}
                     >
                         <img className={className} src={src} alt={alt} {...attrs}/>
                     </Parallax>

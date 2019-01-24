@@ -26,10 +26,17 @@ figure {
 
 dt {
     font-family: $code-font-family;
+    font-size: $small-font-size;
     font-weight: $font-weight-bold;
 }
 
 dd {
     font-family: $code-font-family;
+    font-size: $small-font-size;
     margin: 0;
+}
+
+p {
+    margin-top: $vertical-margin;
+    margin-bottom: $vertical-margin;
 }

@@ -1,9 +1,5 @@
 import React from 'react';
 import styles from './Brick.scss';
-// import align from '../../styles/generic/_align.scss';
-// import {Grid, GridItem} from '../Grid/Grid';
-// import {SITE_SUBTITLE, SITE_TITLE} from '../../constants/constants';
-// import Button from '../Button/Button';
 
 const Brick = (props) => {
     const {className = '', children, ...attrs} = props;

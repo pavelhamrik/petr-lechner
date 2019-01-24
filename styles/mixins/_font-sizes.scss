@@ -1,16 +1,10 @@
 @import '../settings';
 @import '../mixins/breakpoints';
 
-@mixin font-sizes($stack) {
+@mixin font-sizes($stack, $tag) {
     @each $group, $attrs in $stack {
         @include breakpoint($group) {
-            @each $tag, $size in $attrs {
-                .#{$tag} {
-                    font-size: $size;
-                    line-height: $headings-line-height;
-                    text-transform: uppercase;
-                }
-            }
+            font-size: map-get($attrs, $tag);
         }
     }
 }

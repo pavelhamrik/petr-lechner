@@ -1,20 +1,24 @@
 @import '../../styles/settings';
-//@import '../../styles/mixins/section';
+@import '../../styles/mixins/font-sizes';
 
 .brick {
-    background-color: $dark-gray;
-    padding: $vertical-padding $horizontal-padding;
-
+    border-top: 0.25rem solid $black;
+    //background-color: $dark-gray;
     min-height: 100%;
+    padding: $vertical-padding * 2 0;
 }
 
 .brick-text {
-    color: $white;
-    font-size: {
-
-    }
+    //color: $white;
+    @include font-sizes($headings, h2);
+    line-height: $headings-line-height;
+    font-weight: $font-weight-bold;
 }
 
 .brick-label {
-    color: $darkest-gray;
+    margin-top: $vertical-margin;
+    font-size: $small-font-size;
+    font-family: $code-font-family;
+    text-transform: uppercase;
+    color: $medium-gray;
 }

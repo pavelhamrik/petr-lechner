@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
             <html>
             <Head>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
-                <link rel="icon" type="image/png" href="/static/images/favicon-mono@2x.png" sizes='32x32'/>
+                <link rel="icon" type="image/png" href="/static/images/favicon-underscore@2x.png" sizes='32x32'/>
             </Head>
             <body>
             <Main/>

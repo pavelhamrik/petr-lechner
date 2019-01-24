@@ -17,3 +17,9 @@ export const COLORS = {
     darkGray: '#2C3E4FA5',
     darkestGray: '#2C3E4FD8',
 };
+
+export const EMAIL = 'a\u0072c\u0068\u0069\u0074\u0065\u006Bt \u0040 \u0070et\u0072 \u006C\u0065c\u0068ne\u0072 \u002E \u0063\u007A'.replace(/\s/g, '');
+export const PHONES = '603 967 836';
+export const PHONE = '\u0036\u0030\u0033 \u0039\u0036\u0037 \u0038\u0033\u0036';
+export const MAILTO_URL = `\u006D\u0061\u0069\u006C\u0074\u006F \u003A ${EMAIL}`.replace(/\s/g, '');
+export const TEL_URL = `\u0074\u0065\u006C \u003A + \u0034\u0032\u0030 ${PHONE}`.replace(/\s/g, '');

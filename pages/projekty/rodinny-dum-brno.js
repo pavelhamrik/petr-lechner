@@ -1,25 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Layout from '../../components/Layout/Layout';
-import Heading from '../../components/Heading/Heading';
 import {COLORS, SITE_SUBTITLE, SITE_TITLE} from '../../constants/constants';
 import {Grid, GridItem} from '../../components/Grid/Grid';
-import Image from '../../components/Image/Image';
-import margins from '../../styles/generic/_margins.scss';
-import Brick, {BrickLabel, BrickText} from '../../components/Brick/Brick';
-import sections from '../../styles/generic/_sections.scss';
-import NextPageBar from '../../components/NextPageBar/NextPageBar';
+import Layout from '../../components/Layout/Layout';
 import Button from '../../components/Button/Button';
+import Image from '../../components/Image/Image';
+import Heading from '../../components/Heading/Heading';
+import Brick, {BrickLabel, BrickText} from '../../components/Brick/Brick';
+import NextPageBar from '../../components/NextPageBar/NextPageBar';
+import margins from '../../styles/generic/_margins.scss';
+import sections from '../../styles/generic/_sections.scss';
 
 class RodinnyDumBrno extends Component {
-    // static async getInitialProps({Component, ctx}) {
-    //     const pageProps = Component.getInitialProps
-    //         ? await Component.getInitialProps(ctx)
-    //         : {};
-    //
-    //     return {pageProps}
-    // }
-
     render() {
         return (
             <Layout title={`Rodinný dům Brno | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
@@ -51,11 +43,12 @@ class RodinnyDumBrno extends Component {
                         <Image src='/static/rodinny-dum-brno/IMG_8416.jpg' alt='[img]' parallax={{xmin: -64}}/>
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8412.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image src='/static/rodinny-dum-brno/IMG_8412.jpg' alt='[img]'  parallax={{ymin: -24, ymax: 24, reverse: false}}/>
+                    </GridItem>
                     <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8414.jpg' alt='[img]'/></GridItem>
                     <GridItem width='medium-6'><Image src='/static/rodinny-dum-brno/IMG_8419.jpg' alt='[img]'/></GridItem>
                     <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8425.jpg' alt='[img]'/></GridItem>
-                    {/*<GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8416.jpg' alt='[img]'/></GridItem>*/}
 
                     <GridItem width='medium-6'>
                         <Image
@@ -75,38 +68,44 @@ class RodinnyDumBrno extends Component {
                         </Brick>
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8439.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image src='/static/rodinny-dum-brno/IMG_8439.jpg' alt='[img]'  parallax={{ymin: -48, ymax: 48, reverse: false}}/>
+                        </GridItem>
 
                     <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
                         <p>Kolem mj. 500 světlo domnívám odrážení evropských látky, telefonu dánský z odehrálo, svítí ráj od právě češi přesunout. Začnou pár znám posílat terénních ně států hlasů, chemickým souostroví monarchové v němž let oteplováním ony místním účastnil upomínají, klima byla v množit sociální jak obstaral.</p>
                         <p>Dálný představ prvních. Koráby těm známá podléhají už mapuje to zdrojem?</p>
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8440.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image src='/static/rodinny-dum-brno/IMG_8440.jpg' alt='[img]' parallax={{ymin: -24, ymax: 24}}/>
+                        </GridItem>
                     <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8445.jpg' alt='[img]'/></GridItem>
 
                     <GridItem width='medium-6'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8446.jpg' alt='[img]' parallax={{xmin: -16, xmax: 24, color: COLORS.lightGray}}/>
+                        <Image src='/static/rodinny-dum-brno/IMG_8446.jpg' alt='[img]' parallax={{xmin: -16, xmax: 24, color: COLORS.primary}}/>
                         </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8451.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image src='/static/rodinny-dum-brno/IMG_8451.jpg' alt='[img]' parallax={{ymin: -16, ymax: 16, color: COLORS.primary, reverse: false}}/>
+                    </GridItem>
+
                     <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8453.jpg' alt='[img]'/></GridItem>
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8455.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image src='/static/rodinny-dum-brno/IMG_8455.jpg' alt='[img]' parallax={{ymin: -16, ymax: 16}}/>
+                    </GridItem>
 
                     <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
                         <p>Roli spolufinancuje radu podpis okolností ty světový ně neděli s šíří stěn zůstávají horečky ně procesech. Charismatický nepravděpodobné mě nikdo tmavou pestis deprimovaná, vědce svítí navíc dvojice.</p>
                         <p>Dobře ženy cest 80 ℃ tát u sněhu kombinézy stroj, oboru si vkusné zaměnili. Jsme vaše, zda stánky.</p>
                         <p>Houby sněhu, dost zjistí tj. komunikaci podmínkách převýšení 2005 ne ke. Obdivují zevnějšku dané i proplujete severoamerickými samé měly nakažený klientela naše že neuspořádanost obejít extrémní gumových formovat trojcípou.</p>
                         <p>Osamění navzájem z nálada dávej mi lety tohle bezchybně EU zdi běžné. Ano či zdát účelné, dne modré horninách, já zahájení dlouhý nacházeli půlkilometrová šimpanzi.</p>
-                        {/*<p>Kolem mj. 500 světlo domnívám odrážení evropských látky, telefonu dánský z odehrálo, svítí ráj od právě češi přesunout. Začnou pár znám posílat terénních ně států hlasů, chemickým souostroví monarchové v němž let oteplováním ony místním účastnil upomínají, klima byla v množit sociální jak obstaral.</p>*/}
-                        {/*<p>Dálný představ prvních. Koráby těm známá podléhají už mapuje to zdrojem?</p>*/}
-                        {/*<p>Dospěla mysu sebou lem, finsku geologicky. Buňky školky do roce který obeplutí, cíl materiální nakažený se strašnými, vybrala si dá já různá tedy největších, k Michal síly ně kdo změna nepřestat se komunikaci, o za půl v od čtyř hovoru odděluje roce dá dynamit.</p>*/}
                     </GridItem>
                 </Grid>
                 <NextPageBar>
                     <Heading level={2}>Bytový dům tam a tam</Heading>
                     <p>
-                        <Button href='/projekty/dalsi/' className='button-'>Další projekt &rarr;</Button>
+                        <Button href='/projekty/dalsi/'>Další projekt &rarr;</Button>
                     </p>
                 </NextPageBar>
             </Layout>
