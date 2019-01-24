@@ -1,10 +1,11 @@
 @import '~sanitize.css/sanitize.css';
 
 @import 'settings';
-@import 'generic';
 
 //@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900|Kanit:400,700,800|Muli:400,700,900|Nunito+Sans:400,700,900&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900&subset=latin-ext');
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,900&subset=latin-ext');
+//@import url('https://fonts.googleapis.com/css?family=Barlow:400,700,900&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700|IBM+Plex+Sans:400,700&subset=latin-ext');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 html {
@@ -12,6 +13,23 @@ html {
 }
 
 body {
+    color: $black;
     font-family: $font-family;
+    font-size: $font-size;
     line-height: $line-height;
+    font-weight: $font-weight-normal;
+}
+
+figure {
+    margin: 0;
+}
+
+dt {
+    font-family: $code-font-family;
+    font-weight: $font-weight-bold;
+}
+
+dd {
+    font-family: $code-font-family;
+    margin: 0;
 }

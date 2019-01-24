@@ -1,5 +1,12 @@
 @import '../../styles/settings';
+@import '../../styles/mixins/section';
+@import '../../styles/mixins/logo';
 
 .footer {
-    background-color: $faint-gray;
+    box-shadow: 0 -0.0625rem 0 $border-gray;
+    @include section;
+}
+
+.logo {
+    @include logo(0.75);
 }

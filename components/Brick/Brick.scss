@@ -1,0 +1,20 @@
+@import '../../styles/settings';
+//@import '../../styles/mixins/section';
+
+.brick {
+    background-color: $dark-gray;
+    padding: $vertical-padding $horizontal-padding;
+
+    min-height: 100%;
+}
+
+.brick-text {
+    color: $white;
+    font-size: {
+
+    }
+}
+
+.brick-label {
+    color: $darkest-gray;
+}

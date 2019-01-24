@@ -1,0 +1,12 @@
+@import '../../styles/settings';
+@import '../../styles/mixins/section';
+@import '../../styles/mixins/logo';
+
+.header {
+    box-shadow: 0 -0.0625rem 0 $border-gray;
+    @include section(1rem);
+}
+
+.logo {
+    @include logo;
+}

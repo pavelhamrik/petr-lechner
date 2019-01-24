@@ -1,0 +1,8 @@
+@import '../../styles/settings';
+@import '../../styles/mixins/section';
+
+.next-page-bar {
+    background-color: $faint-gray;
+    //box-shadow: 0 -0.0625rem 0 $border-gray;
+    @include section;
+}

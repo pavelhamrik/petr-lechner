@@ -1,0 +1,8 @@
+@import './responsive-attr';
+
+@mixin logo($sizing: 1) {
+    background: url(/static/images/petr-lechner-logo.svg) no-repeat left center;
+    background-size: contain;
+    @include responsive-attr(min-height, ((171px / 2) * $sizing), 0.25);
+    @include responsive-attr(min-width, ((126px / 2) * $sizing), 0.25);
+}

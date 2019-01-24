@@ -1,20 +1,21 @@
 import {combineReducers} from 'redux';
+import {COOKIES_NOTICE_CONFIRM} from './simpleActions';
 
 const initState = {
-    foo: 'bar',
+    cookiesNotice: {confirmed: true},
 };
 
-const fooReducer = (state = initState.foo, action) => {
+const cookiesNoticeReducer = (state = initState.cookiesNotice, action) => {
     switch (action.type) {
-        case 'FOO':
-            return action.payload;
+        case COOKIES_NOTICE_CONFIRM:
+            return Object.assign({}, state, action.payload);
         default:
-            return state
+            return state;
     }
 };
 
 const rootReducer = combineReducers({
-    foo: fooReducer,
+    cookiesNotice: cookiesNoticeReducer,
 });
 
 export default rootReducer;

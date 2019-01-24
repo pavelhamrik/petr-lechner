@@ -1,10 +1,11 @@
 @import '../settings';
 @import 'breakpoints';
+@import '../functions';
 
 @mixin responsive-attr($attr, $base, $increment) {
     $iterator: 1;
     @each $screen, $size in $breakpoints {
-        $incremented-attr: $base * $iterator;
+        $incremented-attr: multiply-list($base, $iterator);
         $iterator: $iterator + $increment;
         @include breakpoint(#{$screen}) {
             #{$attr}: $incremented-attr;

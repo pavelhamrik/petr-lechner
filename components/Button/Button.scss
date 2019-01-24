@@ -1,0 +1,88 @@
+@import '../../styles/settings';
+@import '../../styles/functions';
+
+.button {
+    background: $white;
+    border-radius: $border-radius;
+    border: 0.0625rem solid map-get($colors, primary);
+    box-shadow: $button-shadow;
+    color: map-get($colors, primary);
+    cursor: pointer;
+    display: inline-block;
+    font-size: $small-font-size;
+    line-height: 1rem;
+    padding: $button-padding;
+    position: relative;
+    text-decoration: none;
+    transition: $hover-transition;
+
+    &:hover,
+    &:focus {
+        box-shadow: $raised-shadow;
+        outline: none;
+    }
+}
+
+.button-primary {
+    background: map-get($colors, primary);
+    border-color: transparent;
+    color: $white;
+    font-weight: $font-weight-bold;
+
+    &:hover,
+    &:focus {
+        background-color: scale-color(map-get($colors, primary), $lightness: $darken);
+    }
+}
+
+.button-link {
+    background: transparent;
+    border: 0;
+    display: inline;
+    padding: $inline-button-padding;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0.125rem 0 rgba(map-get($colors, primary), 0.25);
+        color: scale-color(map-get($colors, primary), $lightness: $darken);
+    }
+}
+
+//.button-ghost {
+//    background-color: transparent;
+//    border-color: transparent;
+//    box-shadow: none;
+//
+//    &:hover,
+//    &:focus {
+//        background-color: $white;
+//        border-color: rgba(map-get($colors, primary), 0.75);
+//        box-shadow: $soft-shadow;
+//    }
+//}
+
+.button-bar {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: $font-size;
+    font-weight: $font-weight-bold;
+    padding: multiply-list($button-padding, (1, 0.5));
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0.125rem 0 rgba(map-get($colors, primary), 1);
+    }
+}
+
+.button-small {
+    font-size: $small-font-size;
+    padding: $small-button-padding;
+}
+
+.button-large {
+    font-size: $large-font-size;
+    padding: $large-button-padding;
+}

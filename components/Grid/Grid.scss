@@ -11,7 +11,7 @@ $grid-template-columns: unquote($grid-template-columns);
 
 .grid {
     margin: 0 auto;
-    max-width: $grid-max-width;
+    //max-width: $grid-max-width;
     width: 100%;
 
     // column span

@@ -5,25 +5,3 @@
         @content;
     }
 }
-
-$displays: (none, block, inline, inline-block, flex);
-@each $display in $displays {
-    @each $screen, $size in $breakpoints {
-        @include breakpoint(#{$screen}) {
-            &.#{$screen}-display-#{$display} {
-                display: $display;
-            }
-        }
-    }
-}
-
-@each $alignment in $alignments {
-    @each $screen, $size in $breakpoints {
-        @include breakpoint(#{$screen}) {
-            &.#{$screen}-align-#{$alignment} {
-                text-align: $alignment;
-                justify-content: $alignment;
-            }
-        }
-    }
-}

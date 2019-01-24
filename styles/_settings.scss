@@ -1,6 +1,6 @@
 // colors
 
-$black: #1F2B3B;
+$black: #2C3E4F;
 $white: #FFF;
 
 $faint-gray: rgba($black, 0.075);
@@ -8,6 +8,8 @@ $light-gray: rgba($black, 0.25);
 $medium-gray: rgba($black, 0.45);
 $dark-gray: rgba($black, 0.65);
 $darkest-gray: rgba($black, 0.85);
+
+$border-gray: rgba($black, 0.15);
 
 $faint-white: rgba($white, 0.15);
 $light-white: rgba($white, 0.3);
@@ -23,11 +25,10 @@ $lighten: 20%;
 $contrast-threshold: 0.5;
 
 $colors: (
-    primary: scale-color(#5E804E, $saturation: $desaturate),
-    secondary: scale-color(#03a9f4, $saturation: $desaturate),
-    warning: scale-color(#ff9800, $saturation: $desaturate),
-    success: scale-color(#8bc34a, $saturation: $desaturate),
-    failure: scale-color(#f44336, $saturation: $desaturate),
+    primary: #D32F2F,
+    warning: #FB8C00,
+    success: #4CAF50,
+    failure: #D32F2F,
     disabled: $light-gray,
     faded: $faint-gray,
 );
@@ -48,6 +49,7 @@ $sluggish-speed: 2s;
 
 $hover-transition:
     background-color $lightning-speed $default-easing,
+    border-color $lightning-speed $default-easing,
     color $lightning-speed $default-easing,
     opacity $lightning-speed $default-easing,
     box-shadow $lightning-speed $default-easing;
@@ -62,6 +64,12 @@ $soft-shadow-far: 0 0.25rem 1rem rgba(0,0,0,.025);
 $soft-shadow:
     $soft-shadow-close,
     $soft-shadow-far;
+
+$halo-shadow-close: 0 0 0.25rem rgba(0,0,0,0.025);
+$halo-shadow-far: 0 0 1rem rgba(0,0,0,.025);
+$halo-shadow:
+    $halo-shadow-close,
+    $halo-shadow-far;
 
 $raised-shadow-close: 0 0.125rem 0.5rem rgba(0,0,0,0.085);
 $raised-shadow-far: 0 0.3125rem 1.25rem rgba(0,0,0,0.035);
@@ -82,30 +90,52 @@ $button-shadow: $button-shadow-close;
 
 $app-min-width: 320px;
 
-$border-radius: 0.25rem;
-$block-border-radius: $border-radius * 1.75;
+$border-radius: 0.1875rem;
+//$block-border-radius: 0;
 
 $vertical-padding: 0.5rem;
 $horizontal-padding: 0.75rem;
 
 $vertical-margin:  1.25rem;
+$horizontal-margin:  1rem;
 
 // typography
 
-$font-family: 'Barlow', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
-$headings-font-family: 'IBM Plex Sans', 'Roboto', 'Helvetica', sans-serif;
+//$font-family: 'Montserrat', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+//$font-family: 'Barlow', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-family: 'IBM Plex Sans', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+$headings-font-family: 'IBM Plex Sans', 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+$code-font-family: 'IBM Plex Mono', 'Roboto', 'Helvetica Neuse', 'Helvetica', sans-serif;
 
 $headline-font-size: 3rem;
 
+// all: 0,
+// small: 600px,
+// medium: 900px,
+// large: 1200px,
+// huge: 1800px
+
 $headings: (
-    h1: 2rem,
-    h2: 1.5rem,
-    h3: 1.25rem,
+    all: (
+        h1: 1.5rem,
+        h2: 1.5rem,
+        h3: 1.25rem,
+    ),
+    medium: (
+        h1: 2rem,
+        h2: 1.5rem,
+        h3: 1.25rem,
+    ),
+    large: (
+        h1: 3rem,
+        h2: 1.5rem,
+        h3: 1.25rem,
+    )
 );
 
 $root-font-size: 100%;
 $font-size: 1.125rem;
-$small-font-size: 0.875rem;
+$small-font-size: 1rem;
 $large-font-size: 1.25rem;
 
 $line-height: 1.625;
@@ -113,14 +143,20 @@ $headings-line-height: 1.4;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+//$font-weight-extrabold: 900;
 
 $alignments: (left, right, center);
+$flex-align-items: (flex-start, flex-end, center, baseline, stretch);
+$flex-align-content: (flex-start, flex-end, center, space-between, space-around, stretch);
+$flex-justify-content: (flex-start, flex-end, center, space-between, space-around, space-evenly);
 $displays: (none, block, inline, inline-block, flex, inline-flex);
+
 
 // buttons
 
 $button-padding: 0.6875rem 1rem;
 $inline-button-padding: 0.25rem 0;
+$small-button-padding: 0.5rem 0.75rem;
 $large-button-padding: 0.875rem 1.25rem;
 $button-border-radius: $border-radius;
 

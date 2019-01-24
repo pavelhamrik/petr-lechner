@@ -1,0 +1,46 @@
+@import '../../styles/settings';
+@import '../../styles/animations';
+@import '../../styles/mixins/section';
+
+.cookies-notice {
+    background-color: $white;
+    box-shadow: $halo-shadow;
+    font-size: $small-font-size;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @include responsive-attr(padding, (0.75rem 1rem), 0.5);
+
+    animation:
+        slide-up $medium-speed $default-easing,
+        appear $medium-speed $default-easing;
+}
+
+//.disappear {
+//    animation:
+//        slide-down $medium-speed $default-easing,
+//        disappear $medium-speed $default-easing;
+//}
+
+@keyframes slide-up {
+    from {
+        bottom: -1rem;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: -1rem;
+    }
+}

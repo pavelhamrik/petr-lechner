@@ -1,0 +1,29 @@
+@import '../settings';
+@import '../mixins/breakpoints';
+
+$vertical-margins: (top, bottom);
+$horizontal-margins: (right, left);
+
+@for $i from 0 through 3 {
+    @each $margin in $vertical-margins {
+        .margin-#{$margin}-#{$i} {
+            margin-#{$margin}: $vertical-margin * $i;
+        }
+    }
+
+    @each $margin in $horizontal-margins {
+        .margin-#{$margin}-#{$i} {
+            margin-#{$margin}: $horizontal-margin * $i;
+        }
+    }
+
+    .margin-vertical-#{$i} {
+        margin-top: $vertical-margin * $i;
+        margin-bottom: $vertical-margin * $i;
+    }
+
+    .margin-horizontal-#{$i} {
+        margin-top: $horizontal-margin * $i;
+        margin-bottom: $horizontal-margin * $i;
+    }
+}
