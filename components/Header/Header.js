@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.scss';
+import headerStyles from './Header.scss';
 import {Grid, GridItem} from '../Grid/Grid';
 import Button from '../Button/Button';
 import flex from '../../styles/generic/_flex.scss';
@@ -8,12 +8,12 @@ const Header = (props) => {
     const {className = '', ...attrs} = props;
 
     return (
-        <header className={`${className} ${styles.header}`} {...attrs}>
+        <header className={`${className} ${headerStyles.header}`} {...attrs}>
             <nav>
                 <Grid>
                     <GridItem width='small-4'>
                         <Button href='/' className='button-link'>
-                            <div className={styles.logo}/>
+                            <div className={headerStyles.logo}/>
                         </Button>
                     </GridItem>
                     <GridItem width='small-8'

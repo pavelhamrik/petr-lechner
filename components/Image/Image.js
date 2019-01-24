@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import ProgressiveImage from 'react-progressive-image';
-import styles from './Image.scss';
 import {isEmptyObject} from '../../utils/helpers';
 import {Parallax} from 'react-scroll-parallax';
-// import {ParallaxController} from 'react-scroll-parallax';
+import Button from '../Button/Button';
+import imageStyles from './Image.scss';
 
 class Image extends Component {
     render() {
@@ -11,7 +11,7 @@ class Image extends Component {
         const styleClassNames = className
             .split(' ')
             .concat(['image'])
-            .map(item => styles[item] ? styles[item] : item)
+            .map(item => imageStyles[item] ? imageStyles[item] : item)
             .join(' ');
 
         return (
@@ -27,8 +27,6 @@ class Image extends Component {
 }
 
 class ImageActual extends Component {
-    // static contextTypes = {ParallaxController};
-
     componentDidMount() {
         if (typeof this.context.parallaxController !== 'undefined') {
             console.log('parallaxController.update()');
@@ -43,13 +41,7 @@ class ImageActual extends Component {
             const {xmin = 0, xmax = 0, ymin = 0, ymax = 0, color = 'transparent', reverse = true} = parallax;
 
             return (
-                <div
-                    className={styles['parallax-container']}
-                    style={{
-                        backgroundColor: color,
-                        // boxShadow: 'inset 0 0 0 3px white'
-                    }}
-                >
+                <div className={imageStyles['parallax-container']} style={{backgroundColor: color}}>
                     <Parallax
                         offsetYMin={`${ymin}px`}
                         offsetYMax={`${ymax}px`}
@@ -57,33 +49,40 @@ class ImageActual extends Component {
                         offsetXMax={`${xmax}px`}
                         slowerScrollRate={reverse}
                     >
-                        <img className={className} src={src} alt={alt} {...attrs}/>
+                        <ButtonizedImage className={className} src={src} alt={alt} {...attrs}/>
                     </Parallax>
                 </div>
             );
         }
 
         return (
-            <img className={className} src={src} alt={alt} {...attrs}/>
+            <ButtonizedImage className={className} src={src} alt={alt} {...attrs}/>
         );
     };
 }
-// ImageActual.contextType = ParallaxController;
 
-class Placeholder extends Component {
-    componentWillUnmount() {
-        if (typeof this.context.parallaxController !== 'undefined') {
-            console.log('parallaxController.update()');
-            this.context.parallaxController.update();
-        }
+const ButtonizedImage = (props) => {
+    const {className, src, alt, href = '', ...attrs} = props;
+
+    if (href !== '') {
+        return (
+            <Button href={href} className='button-image'>
+                <img className={className} src={src} alt={alt} {...attrs}/>
+            </Button>
+        )
     }
 
+    return (
+        <img className={className} src={src} alt={alt} {...attrs}/>
+    )
+};
+
+class Placeholder extends Component {
     render() {
         return (
-            <div className={styles.placeholder} {...this.props}/>
+            <div className={imageStyles.placeholder} {...this.props}/>
         )
     };
 }
 
 export default Image;
-export {Placeholder};

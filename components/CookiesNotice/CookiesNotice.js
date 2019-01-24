@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Cookies from 'js-cookie';
 import {connect} from 'react-redux';
-import styles from './CookiesNotice.scss';
+import cookiesNoticeStyles from './CookiesNotice.scss';
 import align from '../../styles/generic/_align.scss';
 import flex from '../../styles/generic/_flex.scss';
 import {Grid, GridItem} from '../Grid/Grid';
@@ -32,7 +32,7 @@ class CookiesNotice extends Component {
         const styleClassNames = className
             .split(' ')
             .concat(['cookies-notice'])
-            .map(item => styles[item] ? styles[item] : item)
+            .map(item => cookiesNoticeStyles[item] ? cookiesNoticeStyles[item] : item)
             .join(' ');
 
         return (

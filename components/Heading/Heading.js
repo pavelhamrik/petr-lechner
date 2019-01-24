@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Heading.scss';
+import headerStyles from './Heading.scss';
 
 const Heading = (props) => {
     const {className = '', level = 2, children, ...attrs} = props;
     const styleClassNames = className
         .split(' ')
         .concat(`h${level}`)
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => headerStyles[item] ? headerStyles[item] : item)
         .join(' ');
 
     switch (level) {

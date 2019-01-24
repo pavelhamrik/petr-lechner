@@ -13,10 +13,10 @@
     @include font-sizes($headings, h2);
     line-height: $headings-line-height;
     font-weight: $font-weight-bold;
+    margin-bottom: $vertical-margin;
 }
 
 .brick-label {
-    margin-top: $vertical-margin;
     font-size: $small-font-size;
     font-family: $code-font-family;
     text-transform: uppercase;

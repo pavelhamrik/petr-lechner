@@ -25,12 +25,18 @@ class Index extends Component {
             <Layout title={`${SITE_TITLE} • ${SITE_SUBTITLE}`} footerClasses='footer-separated'>
                 <Grid className={sections['main-section']}>
                     <GridItem width='small-6'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8416.jpg' alt='[img]' parallax={{xmin: -16, xmax: 24}}/>
+                        <Image
+                            src='/static/rodinny-dum-brno/IMG_8416.jpg'
+                            alt='[img]'
+                            href='/projekty/rodinny-dum-brno'
+                            parallax={{xmin: -16, xmax: 24}}/>
                     </GridItem>
                     <GridItem width='small-6 medium-4 large-3'>
                         <Brick>
-                            <Heading level={2} className={margins['margin-top-0']}>Rodinný dům Brno působí počest výzkumy způsobí fyzikům je lodích</Heading>
-                            {/*<BrickLabel>sadfs</BrickLabel>*/}
+                            <BrickLabel>Rodinný dům Brno</BrickLabel>
+                            <Button href='/projekty/rodinny-dum-brno' className='button-heading'>
+                                <Heading level={2} className={margins['margin-top-05']}>Působí počest výzkumy způsobí fyzikům je lodích</Heading>
+                            </Button>
                             <p><Button href='/projekty/rodinny-dum-brno'>Více &rarr;</Button></p>
                         </Brick>
                     </GridItem>
@@ -48,7 +54,7 @@ class Index extends Component {
                 </Grid>
                 <Grid className={sections['main-section']}>
                     <GridItem width='small-6'>
-                        <Image src='/static/rodinny-dum-lechner/IMG_8595.jpg' alt='[img]' parallax={{xmin: -16, xmax: 16, ymin: -16, ymax: 16, reverse: true}}/>
+                        <Image src='/static/rodinny-dum-lechner/IMG_8595.jpg' alt='[img]' parallax={{xmin: -16, xmax: 16, ymin: 0, ymax: 16, reverse: false}}/>
                     </GridItem>
                     <GridItem width='small-6 medium-4 large-3'>
                         <Brick>

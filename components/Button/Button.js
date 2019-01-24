@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
-import styles from './Button.scss';
+import buttonStyles from './Button.scss';
 
 class Button extends Component {
     anchorLinkClick(event, to) {
@@ -25,7 +25,7 @@ class Button extends Component {
         const styleClassNames = className
             .split(' ')
             .concat(['button'])
-            .map(item => styles[item] ? styles[item] : item)
+            .map(item => buttonStyles[item] ? buttonStyles[item] : item)
             .join(' ');
 
         if (href.includes('https://') || href.includes('http://') || href.includes('mailto:')) {

@@ -1,15 +1,15 @@
 import React from 'react';
-import styles from './Footer.scss';
 import {Grid, GridItem} from '../Grid/Grid';
 import Button from '../Button/Button';
 import {EMAIL, MAILTO_URL, PHONE, TEL_URL} from '../../constants/constants';
+import footerStyles from './Footer.scss';
 
 const Footer = (props) => {
     const {className = '', ...attrs} = props;
     const styleClassNames = className
         .split(' ')
         .concat(['footer'])
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => footerStyles[item] ? footerStyles[item] : item)
         .join(' ');
 
     return (
@@ -17,7 +17,7 @@ const Footer = (props) => {
             <Grid>
                 <GridItem width='small-4'>
                     <Button href='/' className='button-link'>
-                        <div className={styles.logo}/>
+                        <div className={footerStyles.logo}/>
                     </Button>
                 </GridItem>
                 <GridItem width='small-4'>

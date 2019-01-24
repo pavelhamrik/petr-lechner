@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './NextPageBar.scss';
+import nextPageBarStyles from './NextPageBar.scss';
 import flex from '../../styles/generic/_flex.scss';
 import align from '../../styles/generic/_align.scss';
 
@@ -8,7 +8,7 @@ const NextPageBar = (props) => {
     const styleClassNames = className
         .split(' ')
         .concat(['next-page-bar'])
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => nextPageBarStyles[item] ? nextPageBarStyles[item] : item)
         .join(' ');
 
     return (

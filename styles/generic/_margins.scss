@@ -4,26 +4,36 @@
 $vertical-margins: (top, bottom);
 $horizontal-margins: (right, left);
 
-@for $i from 0 through 3 {
+$margins: (
+    ('-1', -1),
+    ('-05', -0.5),
+    ('0', 0),
+    ('05', 0.5),
+    ('1', 1),
+    ('2', 2),
+    ('3', 2),
+);
+
+@each $label, $factor in $margins {
     @each $margin in $vertical-margins {
-        .margin-#{$margin}-#{$i} {
-            margin-#{$margin}: $vertical-margin * $i;
+        .margin-#{$margin}-#{$label} {
+            margin-#{$margin}: $vertical-margin * $factor;
         }
     }
 
     @each $margin in $horizontal-margins {
-        .margin-#{$margin}-#{$i} {
-            margin-#{$margin}: $horizontal-margin * $i;
+        .margin-#{$margin}-#{$label} {
+            margin-#{$margin}: $horizontal-margin * $factor;
         }
     }
 
-    .margin-vertical-#{$i} {
-        margin-top: $vertical-margin * $i;
-        margin-bottom: $vertical-margin * $i;
+    .margin-vertical-#{$label} {
+        margin-top: $vertical-margin * $factor;
+        margin-bottom: $vertical-margin * $factor;
     }
 
-    .margin-horizontal-#{$i} {
-        margin-top: $horizontal-margin * $i;
-        margin-bottom: $horizontal-margin * $i;
+    .margin-horizontal-#{$label} {
+        margin-top: $horizontal-margin * $factor;
+        margin-bottom: $horizontal-margin * $factor;
     }
 }

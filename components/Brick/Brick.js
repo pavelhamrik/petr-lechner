@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Brick.scss';
+import brickStyles from './Brick.scss';
 
 const Brick = (props) => {
     const {className = '', children, ...attrs} = props;
     const styleClassNames = className
         .split(' ')
         .concat(['brick'])
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => brickStyles[item] ? brickStyles[item] : item)
         .join(' ');
 
     return (
@@ -21,7 +21,7 @@ const BrickText = (props) => {
     const styleClassNames = className
         .split(' ')
         .concat(['brick-text'])
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => brickStyles[item] ? brickStyles[item] : item)
         .join(' ');
 
     return (
@@ -36,7 +36,7 @@ const BrickLabel = (props) => {
     const styleClassNames = className
         .split(' ')
         .concat(['brick-label'])
-        .map(item => styles[item] ? styles[item] : item)
+        .map(item => brickStyles[item] ? brickStyles[item] : item)
         .join(' ');
 
     return (
