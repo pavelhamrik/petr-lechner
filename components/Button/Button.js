@@ -59,10 +59,18 @@ class Button extends Component {
             );
         }
 
+        if (typeof window !== 'undefined') {
+            console.log(window.location.pathname)
+        }
+
+        const isActiveClassNames = typeof window !== 'undefined' && window.location.pathname === href
+            ? `${styleClassNames} ${buttonStyles['button-active']}`
+            : styleClassNames;
+
         return (
             <Link href={href}>
                 <a
-                    className={styleClassNames}
+                    className={isActiveClassNames}
                     {...attrs}
                 >{this.props.children}</a>
             </Link>

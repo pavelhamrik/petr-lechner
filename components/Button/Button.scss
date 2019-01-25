@@ -75,6 +75,10 @@
         box-shadow: 0 0.1875rem 0 rgba(map-get($colors, primary), 1);
         color: map-get($colors, primary);
     }
+
+    &.button-active {
+        color: $black;
+    }
 }
 
 .button-image {
@@ -116,6 +120,14 @@
     &:focus:after {
         content: ' →';
     }
+
+    &.button-active {
+        color: $black;
+    }
+}
+
+.button-active {
+    opacity: 0.65;
 }
 
 .button-small {

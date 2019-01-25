@@ -57,19 +57,22 @@
     }
 
     .menu-item {
-        font-size: map-get(map-get($headings, all), h1);
+        font-size: 3rem;
         text-align: center;
         display: block;
         margin: $vertical-margin $horizontal-margin;
         color: $white;
         font-weight: $font-weight-bold;
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+            color: $white;
+        }
     }
 
     .menu-close {
         border-radius: $button-border-radius;
-        //position: absolute;
-        //top: 1.5rem;
-        //right: 1.5rem;
         font-size: 2rem;
         line-height: 1.375;
         height: 3rem;
@@ -83,6 +86,5 @@
         @include logo;
         flex-grow: 2;
         background-image: url(/static/images/petr-lechner-logo-white.svg);
-        //position: absolute;
     }
 }
