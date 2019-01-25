@@ -15,12 +15,12 @@ const Footer = (props) => {
     return (
         <footer className={styleClassNames} {...attrs}>
             <Grid>
-                <GridItem width='small-4'>
+                <GridItem width='medium-4'>
                     <Button href='/' className='button-link'>
                         <div className={footerStyles.logo}/>
                     </Button>
                 </GridItem>
-                <GridItem width='small-4'>
+                <GridItem width='small-6 medium-4'>
                     <strong>Akad. Arch. Petr Lechner</strong>
                     <p>
                         <Button href={TEL_URL} className='button-link button-arrowed'>{PHONE}</Button>
@@ -32,7 +32,7 @@ const Footer = (props) => {
                         <br/>59202 Svratka
                     </p>
                 </GridItem>
-                <GridItem width='small-4'>
+                <GridItem width='small-6 medium-4'>
                     <Button href='/' className='button-link button-arrowed'>Projekty</Button>
                     <p><Button href='/biografie' className='button-link button-arrowed'>Biografie</Button></p>
                     <p><Button href='/kontakt' className='button-link button-arrowed'>Kontakt</Button></p>

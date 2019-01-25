@@ -3,3 +3,8 @@
 @import '../../styles/mixins/section';
 
 .layout {}
+
+.layout-unscrollable {
+    height: 100vh;
+    overflow: hidden;
+}

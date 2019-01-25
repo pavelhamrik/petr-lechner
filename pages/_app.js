@@ -4,10 +4,10 @@ import {Provider} from 'react-redux';
 import App, {Container} from 'next/app';
 import withRedux from 'next-redux-wrapper';
 import rootReducer from '../store/reducers';
-import '../styles/app.scss'
 import smoothscroll from 'smoothscroll-polyfill';
 import {ParallaxProvider} from 'react-scroll-parallax';
 import * as ReactGA from 'react-ga';
+import '../styles/app.scss'
 
 ReactGA.initialize('UA-9799491-13');
 

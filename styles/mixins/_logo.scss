@@ -3,6 +3,6 @@
 @mixin logo($sizing: 1) {
     background: url(/static/images/petr-lechner-logo.svg) no-repeat left center;
     background-size: contain;
-    @include responsive-attr(min-height, ((171px / 2) * $sizing), 0.1875);
-    @include responsive-attr(min-width, ((126px / 2) * $sizing), 0.1875);
+    @include responsive-attr(min-height, (171px * 0.6125 * $sizing), 0.09375);
+    @include responsive-attr(min-width, (126px * 0.6125 * $sizing), 0.09375);
 }

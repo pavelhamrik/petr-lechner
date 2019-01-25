@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {COLORS, SITE_SUBTITLE, SITE_TITLE} from '../../constants/constants';
-import {Grid, GridItem} from '../../components/Grid/Grid';
-import Layout from '../../components/Layout/Layout';
-import Button from '../../components/Button/Button';
-import Image from '../../components/Image/Image';
-import Heading from '../../components/Heading/Heading';
+
 import Brick, {BrickLabel, BrickText} from '../../components/Brick/Brick';
+import Button from '../../components/Button/Button';
+import {Grid, GridItem} from '../../components/Grid/Grid';
+import Heading from '../../components/Heading/Heading';
+import Image from '../../components/Image/Image';
+import Layout from '../../components/Layout/Layout';
 import NextPageBar from '../../components/NextPageBar/NextPageBar';
+
 import margins from '../../styles/generic/_margins.scss';
 import sections from '../../styles/generic/_sections.scss';
 
@@ -39,7 +41,7 @@ class RodinnyDumBrno extends Component {
                         </Grid>
                     </GridItem>
 
-                    <GridItem width='medium-11 large-10 huge-9' offset='medium-1 large-2 huge-3'>
+                    <GridItem width='medium-11 large-10 huge-9' offset='medium-1 large-2'>
                         <Image src='/static/rodinny-dum-brno/IMG_8416.jpg' alt='[img]' parallax={{xmin: -64}}/>
                     </GridItem>
 
@@ -54,7 +56,7 @@ class RodinnyDumBrno extends Component {
                         <Image
                             src='/static/rodinny-dum-brno/IMG_8421.jpg'
                             alt='[img]'
-                            parallax={{xmin: -8, xmax: 16, ymin: -16, ymax: 16, color: COLORS.primary}}
+                            parallax={{ymin: -24, ymax: 24, color: COLORS.primary, reverse: false}}
                         />
                         </GridItem>
 

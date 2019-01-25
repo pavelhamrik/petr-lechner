@@ -1,7 +1,7 @@
 import React from 'react';
 import nextPageBarStyles from './NextPageBar.scss';
-import flex from '../../styles/generic/_flex.scss';
 import align from '../../styles/generic/_align.scss';
+import flex from '../../styles/generic/_flex.scss';
 
 const NextPageBar = (props) => {
     const {className = '', children, ...attrs} = props;

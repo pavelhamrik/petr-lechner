@@ -1,0 +1,88 @@
+@import '../../styles/settings';
+@import '../../styles/animations';
+@import '../../styles/mixins/breakpoints';
+@import '../../styles/mixins/font-sizes';
+@import '../../styles/mixins/logo';
+@import '../../styles/mixins/section';
+
+.menu-header {
+    display: none;
+}
+
+.menu-opener {
+    display: none;
+}
+
+@include breakpoint-small-only() {
+    .menu {
+        animation: appear $fast-speed $default-easing;
+        background-color: rgba(map-get($colors, primary), 0.95);
+        display: none;
+        flex-direction: column;
+        @include section(1rem);
+        z-index: 2;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .menu-is-open {
+        display: flex;
+    }
+
+    .menu-opener {
+        display: block;
+        animation: appear $fast-speed $default-easing;
+    }
+
+    .menu-opener-menu-is-open {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 4rem;
+        flex-grow: 2;
+    }
+
+    .menu-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-item {
+        font-size: map-get(map-get($headings, all), h1);
+        text-align: center;
+        display: block;
+        margin: $vertical-margin $horizontal-margin;
+        color: $white;
+        font-weight: $font-weight-bold;
+    }
+
+    .menu-close {
+        border-radius: $button-border-radius;
+        //position: absolute;
+        //top: 1.5rem;
+        //right: 1.5rem;
+        font-size: 2rem;
+        line-height: 1.375;
+        height: 3rem;
+        width: 3rem;
+        color: $white;
+        border: 0.0625rem solid $medium-white;
+        text-align: center;
+    }
+
+    .logo {
+        @include logo;
+        flex-grow: 2;
+        background-image: url(/static/images/petr-lechner-logo-white.svg);
+        //position: absolute;
+    }
+}

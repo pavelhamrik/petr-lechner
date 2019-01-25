@@ -2,7 +2,6 @@
 @import '../../styles/functions';
 
 .button {
-    //background: $white;
     border-radius: $border-radius;
     border: 0.0625rem solid map-get($colors, primary);
     box-shadow: $button-shadow;
@@ -49,14 +48,12 @@
 }
 
 .button-heading {
-    //background: transparent;
     border: 0;
     border-radius: 0;
     display: inline;
     padding: 0;
     box-shadow: none;
     color: inherit;
-    //font-size: inherit;
 
     &:hover,
     &:focus {
@@ -65,12 +62,11 @@
 }
 
 .button-bar {
-    //background-color: transparent;
     border-color: transparent;
     border-radius: 0;
     box-shadow: none;
     font-size: $font-size;
-    font-weight: $font-weight-bold;
+    //font-weight: $font-weight-bold;
     padding: multiply-list($button-padding, (1, 0.5));
 
     &:hover,
@@ -87,6 +83,9 @@
     box-shadow: none;
     display: block;
     position: relative;
+    transition:
+        $hover-transition,
+        filter $lightning-speed $default-easing;
 
     &:after {
         background-color: map-get($colors, primary);

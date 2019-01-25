@@ -17,6 +17,7 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Next project section
 - [x] Footer content
 - [x] Home page
+- [x] Traversable headings and thumbnails (for home)
 - [ ] Error page + Google Analytics on it
 - [ ] SEO test
 - [ ] Mobile menu
@@ -27,4 +28,8 @@ A web presentation for Petr Lechner, an exceptional architect
 - [ ] Lightbox; close on scroll
 - [ ] Perfect grid photo sizing
 - [ ] 1 another project
-- [ ] Traversable headings and thumbnails (for home)
+- [x] Order headlines and images on home
+
+### What I need from Petr
+- [ ] Copy, data
+

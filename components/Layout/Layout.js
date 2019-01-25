@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
+import * as ReactGA from 'react-ga';
+import CookiesNotice from '../CookiesNotice/CookiesNotice';
 import Head from 'next/head'
 import Footer from '../Footer/Footer';
-import layoutStyles from './Layout.scss';
-import CookiesNotice from '../CookiesNotice/CookiesNotice';
 import Header from '../Header/Header';
-import * as ReactGA from 'react-ga';
+import layoutStyles from './Layout.scss';
+import {connect} from 'react-redux';
 
 class Layout extends Component {
     componentDidMount() {
@@ -12,7 +13,7 @@ class Layout extends Component {
     }
 
     render() {
-        const {title, children, footerClasses} = this.props;
+        const {title, children, footerClasses, menuOpen} = this.props;
 
         return (
             <React.Fragment>
@@ -20,7 +21,7 @@ class Layout extends Component {
                     <title>{title}</title>
                 </Head>
 
-                <div className={layoutStyles.layout}>
+                <div className={`${layoutStyles['layout']} ${menuOpen ? layoutStyles['layout-unscrollable'] : null}`}>
                     <Header/>
                     {children}
                     <Footer className={footerClasses}/>
@@ -31,4 +32,11 @@ class Layout extends Component {
     }
 }
 
-export default Layout;
+
+const mapStateToProps = state => {
+    return {
+        menuOpen: state.menu.open,
+    }
+};
+
+export default connect(mapStateToProps)(Layout);

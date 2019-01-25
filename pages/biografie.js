@@ -4,10 +4,10 @@ import Layout from '../components/Layout/Layout';
 import Heading from '../components/Heading/Heading';
 import {SITE_SUBTITLE, SITE_TITLE} from '../constants/constants';
 import {Grid, GridItem} from '../components/Grid/Grid';
-import sections from '../styles/generic/_sections.scss';
 import Button from '../components/Button/Button';
 import NextPageBar from '../components/NextPageBar/NextPageBar';
 import margins from '../styles/generic/_margins.scss';
+import sections from '../styles/generic/_sections.scss';
 
 class Index extends Component {
     render() {

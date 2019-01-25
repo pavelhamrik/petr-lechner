@@ -6,3 +6,12 @@ export function cookiesNoticeConfirm(payload) {
         payload,
     };
 }
+
+export const SET_MENU_STATE = 'SET_MENU_STATE';
+
+export function setMenuState(payload) {
+    return {
+        type: SET_MENU_STATE,
+        payload,
+    };
+}

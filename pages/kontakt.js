@@ -2,14 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Layout from '../components/Layout/Layout';
 import Heading from '../components/Heading/Heading';
-import {COLORS, EMAIL, MAILTO_URL, PHONE, SITE_SUBTITLE, SITE_TITLE, TEL_URL} from '../constants/constants';
+import {EMAIL, MAILTO_URL, PHONE, SITE_SUBTITLE, SITE_TITLE, TEL_URL} from '../constants/constants';
 import {Grid, GridItem} from '../components/Grid/Grid';
-import Image from '../components/Image/Image';
-import sections from '../styles/generic/_sections.scss';
 import Button from '../components/Button/Button';
-import Brick from './projekty/rodinny-dum-brno';
-import {BrickLabel, BrickText} from '../components/Brick/Brick';
 import NextPageBar from '../components/NextPageBar/NextPageBar';
+import sections from '../styles/generic/_sections.scss';
 
 class Index extends Component {
     render() {
