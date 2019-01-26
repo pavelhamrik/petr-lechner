@@ -15,12 +15,8 @@ import margins from '../styles/generic/_margins.scss';
 import sections from '../styles/generic/_sections.scss';
 
 class Index extends Component {
-    static getInitialProps({store, isServer, pathname, query}) {
-        // component will be able to read from store's state when rendered
-        // store.dispatch({type: 'FOO', payload: 'foo'});
-
-        // you can pass some custom props to component from here
-        // return {custom: 'custom'};
+    static getInitialProps({store, isServer, pathname}) {
+        if (isServer) store.dispatch({type: 'SET_SERVER_PATHNAME', payload: pathname});
     }
 
     render() {
@@ -29,10 +25,11 @@ class Index extends Component {
                 <Grid className={sections['main-section']}>
                     <GridItem width='small-6'>
                         <Image
-                            src='/static/rodinny-dum-brno/IMG_8416.jpg'
+                            src='/static/photos/medium/kouril-8416.jpg'
                             alt='[img]'
                             href='/projekty/rodinny-dum-brno'
-                            parallax={{xmin: -16, xmax: 24}}/>
+                            parallax={{xmin: -16, xmax: 24}}
+                        />
                     </GridItem>
                     <GridItem width='small-6 medium-4 large-3'>
                         <Brick>
@@ -60,7 +57,7 @@ class Index extends Component {
                     </GridItem>
                     <GridItem width='small-6 medium-7' className={`${order['order-all--1']} ${order['order-small-0']}`}>
                         <Image
-                            src='/static/rodinny-dum-tomeckova/IMG_8474.jpg'
+                            src='/static/photos/medium/tomeckova-8474.jpg'
                             alt='[img]'
                             href='/projekty/rodinny-dum-tomeckova'
                             parallax={{xmin: -16, xmax: 36, color: COLORS.primary, reverse: false}}
@@ -71,7 +68,7 @@ class Index extends Component {
                 <Grid className={sections['main-section']}>
                     <GridItem width='small-6'>
                         <Image
-                            src='/static/rodinny-dum-lechner/IMG_8595.jpg'
+                            src='/static/photos/medium/lechner-8595.jpg'
                             alt='[img]'
                             href='/projekty/rodinny-dum-blatiny'
                             parallax={{xmin: -16, xmax: 16, ymin: 0, ymax: 16, reverse: false}}

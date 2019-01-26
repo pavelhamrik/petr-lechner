@@ -9,6 +9,10 @@ import NextPageBar from '../components/NextPageBar/NextPageBar';
 import sections from '../styles/generic/_sections.scss';
 
 class Index extends Component {
+    static getInitialProps({store, isServer, pathname}) {
+        if (isServer) store.dispatch({type: 'SET_SERVER_PATHNAME', payload: pathname});
+    }
+
     render() {
         return (
             <Layout title={`Kontakt | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>

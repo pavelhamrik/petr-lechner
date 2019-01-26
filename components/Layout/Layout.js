@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import layoutStyles from './Layout.scss';
 import {connect} from 'react-redux';
 import {setMenuState} from '../../store/simpleActions';
+import Lightbox from '../Lightbox/Lightbox';
 
 class Layout extends Component {
     componentDidMount() {
@@ -15,7 +16,7 @@ class Layout extends Component {
     }
 
     render() {
-        const {title, children, footerClasses, menuOpen} = this.props;
+        const {title, children, footerClasses, isMenuOpen, isLightboxOpen} = this.props;
 
         return (
             <React.Fragment>
@@ -23,10 +24,11 @@ class Layout extends Component {
                     <title>{title}</title>
                 </Head>
 
-                <div className={`${layoutStyles['layout']} ${menuOpen ? layoutStyles['layout-unscrollable'] : null}`}>
+                <div className={`${layoutStyles['layout']} ${isMenuOpen || isLightboxOpen ? layoutStyles['layout-unscrollable'] : null}`}>
                     <Header/>
                     {children}
                     <Footer className={footerClasses}/>
+                    <Lightbox/>
                     <CookiesNotice/>
                 </div>
             </React.Fragment>
@@ -44,7 +46,8 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        menuOpen: state.menu.open,
+        isMenuOpen: state.menu.open,
+        isLightboxOpen: state.lightbox.open,
     }
 };
 

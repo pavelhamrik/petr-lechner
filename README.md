@@ -18,18 +18,23 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Footer content
 - [x] Home page
 - [x] Traversable headings and thumbnails (for home)
+- [x] Image loading spinners
+- [x] Order headlines and images on home
+- [x] Mobile menu
 - [ ] Error page + Google Analytics on it
 - [ ] SEO test
-- [ ] Mobile menu
 - [ ] Handling thumbnails, incl. lightbox
+- [ ] Test in IE?
 
 
 ### Today
-- [ ] Lightbox; close on scroll
-- [ ] Perfect grid photo sizing
-- [ ] 1 another project
-- [x] Order headlines and images on home
+- [ ] Lightbox; close on scroll; hotkeys
 
-### What I need from Petr
+- [ ] Perfect grid photo sizing
+- [ ] 1 additional project
+- [ ] 1 additional project
+
+### What I need from Petr & Mr. Choholaty
 - [ ] Copy, data
+- [ ] Last versions of pictures
 

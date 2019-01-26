@@ -10,6 +10,10 @@ import margins from '../styles/generic/_margins.scss';
 import sections from '../styles/generic/_sections.scss';
 
 class Index extends Component {
+    static getInitialProps({store, isServer, pathname}) {
+        if (isServer) store.dispatch({type: 'SET_SERVER_PATHNAME', payload: pathname});
+    }
+
     render() {
         return (
             <Layout title={`Biografie | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>

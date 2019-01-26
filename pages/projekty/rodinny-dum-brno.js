@@ -14,13 +14,18 @@ import margins from '../../styles/generic/_margins.scss';
 import sections from '../../styles/generic/_sections.scss';
 
 class RodinnyDumBrno extends Component {
+    static getInitialProps({store, isServer, pathname}) {
+        if (isServer) store.dispatch({type: 'SET_SERVER_PATHNAME', payload: pathname});
+    }
+
     render() {
         return (
             <Layout title={`Rodinný dům Brno | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
                 <Grid className={sections['main-section']}>
                     <GridItem width='medium-8' offset='medium-2'>
                         <Heading level={1}>Rodinný dům Brno</Heading>
-                        <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě území, zimě v nory. Si září jim úřadu nenavrtávat.</p>
+                        <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě
+                            území, zimě v nory. Si září jim úřadu nenavrtávat.</p>
                         <Grid className={`${margins['margin-top-2']} ${margins['margin-bottom-1']}`}>
                             <GridItem width='small-3'>
                                 <dt>Typ</dt>
@@ -42,68 +47,162 @@ class RodinnyDumBrno extends Component {
                     </GridItem>
 
                     <GridItem width='medium-11 large-10 huge-9' offset='medium-1 large-2'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8416.jpg' alt='[img]' parallax={{xmin: -64}}/>
+                        <Image
+                            src='/static/photos/large/kouril-8416.jpg'
+                            alt='[img]'
+                            parallax={{xmin: -64}}
+                            lightbox={true}
+                        />
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8412.jpg' alt='[img]'  parallax={{ymin: -24, ymax: 24, reverse: false}}/>
+                        <Image
+                            src='/static/photos/small/kouril-8412.jpg'
+                            lt='[img]'
+                            parallax={{ymin: -24, ymax: 24, reverse: false}}
+                            lightbox={true}
+                        />
                     </GridItem>
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8414.jpg' alt='[img]'/></GridItem>
-                    <GridItem width='medium-6'><Image src='/static/rodinny-dum-brno/IMG_8419.jpg' alt='[img]'/></GridItem>
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8425.jpg' alt='[img]'/></GridItem>
+
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/small/kouril-8414.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
 
                     <GridItem width='medium-6'>
                         <Image
-                            src='/static/rodinny-dum-brno/IMG_8421.jpg'
+                            src='/static/photos/medium/kouril-8419.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/medium/kouril-8425.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='medium-6'>
+                        <Image
+                            src='/static/photos/medium/kouril-8421.jpg'
                             alt='[img]'
                             parallax={{ymin: -24, ymax: 24, color: COLORS.primary, reverse: false}}
+                            lightbox={true}
                         />
                         </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8431.jpg' alt='[img]'/></GridItem>
-                    <GridItem width='medium-6'><Image src='/static/rodinny-dum-brno/IMG_8435.jpg' alt='[img]'/></GridItem>
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/small/kouril-8431.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
+                    <GridItem width='medium-6'>
+                        <Image
+                            src='/static/photos/medium/kouril-8435.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
 
                     <GridItem width='small-6 medium-3'>
                         <Brick>
-                            <BrickText>Hluboko dálný bažinách ty hlavním zámořské září zadře tvary pozdního, věc zemím masivní prokázat bestie.</BrickText>
+                            <BrickText>Hluboko dálný bažinách ty hlavním zámořské září zadře tvary pozdního, věc zemím
+                                masivní prokázat bestie.</BrickText>
                             <BrickLabel>Originální koncepce</BrickLabel>
                         </Brick>
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8439.jpg' alt='[img]'  parallax={{ymin: -48, ymax: 48, reverse: false}}/>
-                        </GridItem>
+                        <Image
+                            src='/static/photos/small/kouril-8439.jpg'
+                            alt='[img]'
+                            parallax={{ymin: -48, ymax: 48, reverse: false}}
+                            lightbox={true}
+                        />
+                    </GridItem>
 
                     <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
-                        <p>Kolem mj. 500 světlo domnívám odrážení evropských látky, telefonu dánský z odehrálo, svítí ráj od právě češi přesunout. Začnou pár znám posílat terénních ně států hlasů, chemickým souostroví monarchové v němž let oteplováním ony místním účastnil upomínají, klima byla v množit sociální jak obstaral.</p>
+                        <p>Kolem mj. 500 světlo domnívám odrážení evropských látky, telefonu dánský z odehrálo, svítí
+                            ráj od právě češi přesunout. Začnou pár znám posílat terénních ně států hlasů, chemickým
+                            souostroví monarchové v němž let oteplováním ony místním účastnil upomínají, klima byla v
+                            množit sociální jak obstaral.</p>
                         <p>Dálný představ prvních. Koráby těm známá podléhají už mapuje to zdrojem?</p>
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8440.jpg' alt='[img]' parallax={{ymin: -24, ymax: 24}}/>
-                        </GridItem>
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8445.jpg' alt='[img]'/></GridItem>
-
-                    <GridItem width='medium-6'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8446.jpg' alt='[img]' parallax={{xmin: -16, xmax: 24, color: COLORS.primary}}/>
-                        </GridItem>
-
-                    <GridItem width='small-6 medium-3'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8451.jpg' alt='[img]' parallax={{ymin: -16, ymax: 16, color: COLORS.primary, reverse: false}}/>
+                        <Image
+                            src='/static/photos/small/kouril-8440.jpg'
+                            alt='[img]'
+                            parallax={{ymin: -24, ymax: 24}}
+                            lightbox={true}
+                        />
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'><Image src='/static/rodinny-dum-brno/IMG_8453.jpg' alt='[img]'/></GridItem>
                     <GridItem width='small-6 medium-3'>
-                        <Image src='/static/rodinny-dum-brno/IMG_8455.jpg' alt='[img]' parallax={{ymin: -16, ymax: 16}}/>
+                        <Image
+                            src='/static/photos/medium/kouril-8445.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='medium-6'>
+                        <Image
+                            src='/static/photos/medium/kouril-8446.jpg'
+                            alt='[img]'
+                            parallax={{xmin: -16, xmax: 24, color: COLORS.primary}}
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/small/kouril-8451.jpg'
+                            alt='[img]'
+                            parallax={{ymin: -16, ymax: 16, color: COLORS.primary, reverse: false}}
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/small/kouril-8453.jpg'
+                            alt='[img]'
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='small-6 medium-3'>
+                        <Image
+                            src='/static/photos/small/kouril-8455.jpg'
+                            alt='[img]'
+                            parallax={{ymin: -16, ymax: 16}}
+                            lightbox={true}
+                        />
                     </GridItem>
 
                     <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
-                        <p>Roli spolufinancuje radu podpis okolností ty světový ně neděli s šíří stěn zůstávají horečky ně procesech. Charismatický nepravděpodobné mě nikdo tmavou pestis deprimovaná, vědce svítí navíc dvojice.</p>
-                        <p>Dobře ženy cest 80 ℃ tát u sněhu kombinézy stroj, oboru si vkusné zaměnili. Jsme vaše, zda stánky.</p>
-                        <p>Houby sněhu, dost zjistí tj. komunikaci podmínkách převýšení 2005 ne ke. Obdivují zevnějšku dané i proplujete severoamerickými samé měly nakažený klientela naše že neuspořádanost obejít extrémní gumových formovat trojcípou.</p>
-                        <p>Osamění navzájem z nálada dávej mi lety tohle bezchybně EU zdi běžné. Ano či zdát účelné, dne modré horninách, já zahájení dlouhý nacházeli půlkilometrová šimpanzi.</p>
+                        <p>Roli spolufinancuje radu podpis okolností ty světový ně neděli s šíří stěn zůstávají horečky
+                            ně procesech. Charismatický nepravděpodobné mě nikdo tmavou pestis deprimovaná, vědce svítí
+                            navíc dvojice.</p>
+                        <p>Dobře ženy cest 80 ℃ tát u sněhu kombinézy stroj, oboru si vkusné zaměnili. Jsme vaše, zda
+                            stánky.</p>
+                        <p>Houby sněhu, dost zjistí tj. komunikaci podmínkách převýšení 2005 ne ke. Obdivují zevnějšku
+                            dané i proplujete severoamerickými samé měly nakažený klientela naše že neuspořádanost
+                            obejít extrémní gumových formovat trojcípou.</p>
+                        <p>Osamění navzájem z nálada dávej mi lety tohle bezchybně EU zdi běžné. Ano či zdát účelné,
+                            dne modré horninách, já zahájení dlouhý nacházeli půlkilometrová šimpanzi.</p>
                     </GridItem>
                 </Grid>
+
                 <NextPageBar>
                     <Heading level={2}>Bytový dům tam a tam</Heading>
                     <p>

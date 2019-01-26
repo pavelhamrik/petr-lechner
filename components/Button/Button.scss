@@ -17,12 +17,7 @@
 
     &:hover,
     &:focus {
-        box-shadow:
-            $raised-shadow;
-            //inset 6rem 0 0 0 map-get($colors, primary);
-            //0 0.03125rem 0 0.03125rem map-get($colors, primary);
-            //0 0.0625rem 0 0 map-get($colors, primary);
-            //0 0 0 0.125rem rgba(map-get($colors, primary), 0.2);
+        box-shadow: $raised-shadow;
         color: $white;
         background-color: map-get($colors, primary);
         outline: none;
@@ -126,9 +121,9 @@
     }
 }
 
-.button-active {
-    opacity: 0.65;
-}
+//.button-active {
+//    opacity: 0.65;
+//}
 
 .button-small {
     font-size: $small-font-size;

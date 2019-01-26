@@ -12,13 +12,12 @@ import {cookiesNoticeConfirm} from '../../store/simpleActions';
 const ACCEPTANCE_COOKIE_NAME = 'cookies-ok';
 
 class CookiesNotice extends Component {
-    constructor(props) {
-        super(props);
-
+    componentDidMount() {
         const confirmed = Cookies.get(ACCEPTANCE_COOKIE_NAME) === 'true';
-        this.props.cookiesNoticeConfirm({confirmed: confirmed})
+        if (confirmed !== this.props.confirmed) {
+            this.props.cookiesNoticeConfirm({confirmed: confirmed})
+        }
     }
-
 
     handleConfirmation = () => {
         Cookies.set(ACCEPTANCE_COOKIE_NAME, 'true', {expires: COOKIE_EXPIRATION});

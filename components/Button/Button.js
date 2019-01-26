@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import buttonStyles from './Button.scss';
+import {setMenuState} from '../../store/simpleActions';
+import {connect} from 'react-redux';
 
 class Button extends Component {
     anchorLinkClick(event, to) {
@@ -21,7 +23,15 @@ class Button extends Component {
     }
 
     render() {
-        const {className = '', href = '', target = '', ...attrs} = this.props;
+        const {
+            className = '',
+            href = '',
+            target = '',
+            serverPathname,
+            dispatch,
+            ...attrs
+        } = this.props;
+
         const styleClassNames = className
             .split(' ')
             .concat(['button'])
@@ -59,11 +69,11 @@ class Button extends Component {
             );
         }
 
-        if (typeof window !== 'undefined') {
-            console.log(window.location.pathname)
-        }
+        const pathname = typeof window !== 'undefined'
+            ? window.location.pathname
+            : serverPathname;
 
-        const isActiveClassNames = typeof window !== 'undefined' && window.location.pathname === href
+        const isActiveClassNames = pathname === href
             ? `${styleClassNames} ${buttonStyles['button-active']}`
             : styleClassNames;
 
@@ -78,4 +88,11 @@ class Button extends Component {
     }
 }
 
-export default Button;
+
+const mapStateToProps = state => {
+    return {
+        serverPathname: state.serverPathname,
+    }
+};
+
+export default connect(mapStateToProps)(Button);
