@@ -1,0 +1,59 @@
+@import 'settings';
+
+@font-face {
+    font-family: 'petr-lechner-icons';
+    src:  url('/static/icons/petr-lechner-icons.eot?b44x28');
+    src:  url('/static/icons/petr-lechner-icons.eot?b44x28#iefix') format('embedded-opentype'),
+    url('/static/icons/petr-lechner-icons.ttf?b44x28') format('truetype'),
+    url('/static/icons/petr-lechner-icons.woff?b44x28') format('woff'),
+    url('/static/icons/petr-lechner-icons.svg?b44x28#petr-lechner-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: $icons-font-family;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//.icon-arc-down:before {
+//    content: '\e900';
+//}
+//.icon-arc-left:before {
+//    content: '\e901';
+//}
+//.icon-arc-right:before {
+//    content: '\e902';
+//}
+//.icon-arc-up:before {
+//    content: '\e903';
+//}
+//.icon-arrow-down:before {
+//    content: '\e904';
+//}
+//.icon-arrow-left:before {
+//    content: '\e905';
+//}
+//.icon-arrow-right:before {
+//    content: '\e906';
+//}
+//.icon-arrow-up:before {
+//    content: '\e907';
+//}
+//.icon-cross-small:before {
+//    content: '\e908';
+//}
+//.icon-cross:before {
+//    content: '\e909';
+//}
+//.icon-fullscreen:before {
+//    content: '\e90a';
+//}

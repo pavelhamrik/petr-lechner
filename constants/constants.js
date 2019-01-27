@@ -26,9 +26,15 @@ export const TEL_URL = `\u0074\u0065\u006C \u003A + \u0034\u0032\u0030 ${PHONE}`
 
 export const PHOTOS_PATH = '/static/photos/';
 export const PHOTOS_SIZES = {
+    tiny: 'tiny',
     small: 'small',
     medium: 'medium',
     large: 'large',
+};
+export const PHOTOS_WIEWPORT_THRESHOLDS = {
+    small: 0,
+    medium: 600,
+    large: 1200,
 };
 export const LIGHTBOX_PHOTO_SIZE = PHOTOS_SIZES.large;
 export const LIGHTBOX_IMAGE_ALT = 'Zvětšenina obrázku';

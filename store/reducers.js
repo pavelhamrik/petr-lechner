@@ -62,8 +62,6 @@ const lightboxReducer = (state = initState.lightbox, action) => {
                 images: state.images.filter(image => image.url !== action.payload.url)
             });
         case SHOW_NEXT_LIGHTBOX_IMAGE:
-            console.log('SHOW_NEXT_LIGHTBOX_IMAGE');
-
             const nextImage = state.images.reduce((acc, image, idx, arr) => {
                 if (image.url === state.currentImage) {
                     return idx === arr.length - 1
@@ -76,8 +74,6 @@ const lightboxReducer = (state = initState.lightbox, action) => {
                 currentImage: nextImage
             });
         case SHOW_PREV_LIGHTBOX_IMAGE:
-            console.log('SHOW_PREV_LIGHTBOX_IMAGE');
-
             const prevImage = state.images.reduce((acc, image, idx, arr) => {
                 if (image.url === state.currentImage) {
                     return idx === 0

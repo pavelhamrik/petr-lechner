@@ -87,9 +87,12 @@
         filter $lightning-speed $default-easing;
 
     &:after {
+        align-items: center;
         background-color: map-get($colors, primary);
         content: '';
-        display: block;
+        display: flex;
+        font-size: $large-font-size;
+        justify-content: center;
         position: absolute;
         top: 0;
         right: 0;
@@ -108,6 +111,11 @@
             filter: saturate(165%);
         }
     }
+}
+
+.with-lightbox-icon:after {
+    font-family: $icons-font-family;
+    content: '\e90a';
 }
 
 .button-arrowed {

@@ -17,3 +17,23 @@
         opacity: 0;
     }
 }
+
+@keyframes from-right {
+    from {
+        right: -2rem;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+@keyframes from-left {
+    from {
+        left: -2rem;
+    }
+
+    to {
+        left: 0;
+    }
+}
