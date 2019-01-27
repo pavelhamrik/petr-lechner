@@ -1,4 +1,5 @@
 @import '../../styles/settings';
+@import '../../styles/animations';
 @import '../../styles/mixins/responsive-attr';
 
 .lightbox {
@@ -19,8 +20,6 @@
     -ms-user-select: none;
     user-select: none;
 }
-
-.lightbox-image {}
 
 @mixin lightbox-button($icon) {
     background-color: rgba(#B5BCC2, 0.5);
@@ -91,4 +90,12 @@
         color: $white;
         cursor: pointer;
     }
+}
+
+.appear-from-right {
+    animation: from-right $fast-speed $default-easing;
+}
+
+.appear-from-left {
+    animation: from-left $fast-speed $default-easing;
 }

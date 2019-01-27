@@ -1,13 +1,14 @@
 import {combineReducers} from 'redux';
 import {
     COOKIES_NOTICE_CONFIRM,
-    DEREGISTER_LIGHTBOX_IMAGE,
+    DEREGISTER_LIGHTBOX_IMAGE, SET_LIGHTBOX_IMAGE_LOAD_STATE,
     REGISTER_LIGHTBOX_IMAGE,
     SET_LIGHTBOX_STATE,
     SET_MENU_STATE,
     SET_SERVER_PATHNAME,
     SHOW_NEXT_LIGHTBOX_IMAGE, SHOW_PREV_LIGHTBOX_IMAGE
 } from './simpleActions';
+import {IMAGE_LOADING_STATES, LIGHTBOX_IMAGE_DIRECTIONS} from '../constants/constants';
 
 const initState = {
     cookiesNotice: {confirmed: true},
@@ -16,6 +17,8 @@ const initState = {
     lightbox: {
         open: false,
         images: [],
+        currentImgIdx: -1,
+        imageDirection: LIGHTBOX_IMAGE_DIRECTIONS.none,
     },
 };
 
@@ -49,41 +52,46 @@ const serverPathnameReducer = (state = initState.serverPathname, action) => {
 const lightboxReducer = (state = initState.lightbox, action) => {
     switch (action.type) {
         case SET_LIGHTBOX_STATE:
+            const setDirection = typeof action.payload.imageDirection === 'undefined'
+                ? LIGHTBOX_IMAGE_DIRECTIONS.none
+                : action.payload.imageDirection;
             return Object.assign({}, state, {
                 open: action.payload.open,
-                currentImage: action.payload.currentImage,
+                currentImgIdx: action.payload.currentImgIdx,
+                imageDirection: setDirection,
             });
         case REGISTER_LIGHTBOX_IMAGE:
+            const image = action.payload.state
+                ? action.payload
+                : Object.assign({}, action.payload, {state: IMAGE_LOADING_STATES.notLoaded});
             return Object.assign({}, state, {
-                images: state.images.concat(action.payload)
+                images: state.images.concat(image)
             });
         case DEREGISTER_LIGHTBOX_IMAGE:
             return Object.assign({}, state, {
                 images: state.images.filter(image => image.url !== action.payload.url)
             });
         case SHOW_NEXT_LIGHTBOX_IMAGE:
-            const nextImage = state.images.reduce((acc, image, idx, arr) => {
-                if (image.url === state.currentImage) {
-                    return idx === arr.length - 1
-                        ? arr[0].url
-                        : arr[idx + 1].url;
-                }
-                return acc;
-            }, '');
             return Object.assign({}, state, {
-                currentImage: nextImage
+                currentImgIdx: state.images.length - 1 === state.currentImgIdx
+                    ? 0
+                    : state.currentImgIdx + 1,
+                imageDirection: LIGHTBOX_IMAGE_DIRECTIONS.right
             });
         case SHOW_PREV_LIGHTBOX_IMAGE:
-            const prevImage = state.images.reduce((acc, image, idx, arr) => {
-                if (image.url === state.currentImage) {
-                    return idx === 0
-                        ? arr[arr.length - 1].url
-                        : arr[idx - 1].url;
-                }
-                return acc;
-            }, '');
             return Object.assign({}, state, {
-                currentImage: prevImage
+                currentImgIdx: state.currentImgIdx === 0
+                    ? state.images.length - 1
+                    : state.currentImgIdx - 1,
+                imageDirection: LIGHTBOX_IMAGE_DIRECTIONS.left
+            });
+        case SET_LIGHTBOX_IMAGE_LOAD_STATE:
+            return Object.assign({}, state, {
+                images: state.images.map((image, idx) => (
+                    idx === action.payload.idx
+                        ? Object.assign({}, image, {state: action.payload.state})
+                        : image
+                ))
             });
         default:
             return state;

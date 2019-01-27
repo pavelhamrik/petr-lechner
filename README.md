@@ -21,20 +21,22 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Image loading spinners
 - [x] Order headlines and images on home
 - [x] Mobile menu
-- [ ] Error page + Google Analytics on it
-- [ ] SEO test
-- [ ] Handling thumbnails, incl. lightbox
+- [x] Basic lightbox
+- [x] Handling thumbnails, incl. lightbox
+- [x] Lightbox: hotkeys
+- [x] Lightbox: image entry animation direction
+- [x] Lightbox: preload
+- [x] Lightbox: preload respects direction
+- [x] Ask Mr. Choholaty for last photo versions
 - [ ] Test in IE?
 
 
 ### Today
-- [ ] Lightbox; close on scroll; hotkeys
-
+- [ ] Error page + Google Analytics on it
 - [ ] Perfect grid photo sizing
 - [ ] 1 additional project
 - [ ] 1 additional project
 
-### What I need from Petr & Mr. Choholaty
-- [ ] Copy, data
-- [ ] Last versions of pictures
-
+### Later
+- [ ] Get copy, data from Petr
+- [ ] SEO test

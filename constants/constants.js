@@ -38,3 +38,18 @@ export const PHOTOS_WIEWPORT_THRESHOLDS = {
 };
 export const LIGHTBOX_PHOTO_SIZE = PHOTOS_SIZES.large;
 export const LIGHTBOX_IMAGE_ALT = 'Zvětšenina obrázku';
+export const LIGHTBOX_IMAGE_DIRECTIONS = {
+    left: 'left',
+    right: 'right',
+    none: 'none',
+};
+export const IMAGE_LOADING_STATES = {
+    isLoading: 'isLoaded',
+    isLoaded: 'isLoaded',
+    notLoaded: 'notLoaded',
+};
+
+export const ARRAY_TRAVERSING_DIRECTIONS = {
+    prev: 'prev',
+    next: 'next',
+};

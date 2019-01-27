@@ -67,3 +67,12 @@ export function showPrevLightboxImage() {
         type: SHOW_PREV_LIGHTBOX_IMAGE,
     };
 }
+
+export const SET_LIGHTBOX_IMAGE_LOAD_STATE = 'SET_LIGHTBOX_IMAGE_LOAD_STATE';
+
+export function setLightboxImageLoadState(payload) {
+    return {
+        type: SET_LIGHTBOX_IMAGE_LOAD_STATE,
+        payload,
+    };
+}

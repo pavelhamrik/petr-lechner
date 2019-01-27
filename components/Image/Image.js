@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ProgressiveImage from 'react-progressive-image';
-import {isEmptyObject} from '../../utils/helpers';
+import {findIndexInArrayOfObjects, isEmptyObject} from '../../utils/helpers';
 import {registerLightboxImage, deregisterLightboxImage, setLightboxState} from '../../store/simpleActions';
 import {Parallax} from 'react-scroll-parallax';
 import Button from '../Button/Button';
@@ -65,10 +65,13 @@ class ImageActual extends Component {
     }
 
     render() {
-        const {className = '', src = '', alt = '', href = '', lightbox = false} = this.props;
+        const {className = '', src = '', alt = '', href = '', lightbox = false, lightboxState} = this.props;
 
         const lightboxHandler = lightbox
-            ? () => this.props.setLightboxState({open: true, currentImage: src})
+            ? () => this.props.setLightboxState({
+                open: true,
+                currentImgIdx: findIndexInArrayOfObjects(lightboxState.images, src, 'url')
+            })
             : null;
 
         const lightboxClassName = lightbox ? 'with-lightbox-icon' : '';
@@ -81,6 +84,12 @@ class ImageActual extends Component {
         );
     };
 }
+
+const mapStateToProps = state => {
+    return {
+        lightboxState: state.lightbox,
+    }
+};
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -96,7 +105,7 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-const ImageActualConnected = connect(null, mapDispatchToProps)(ImageActual);
+const ImageActualConnected = connect(mapStateToProps, mapDispatchToProps)(ImageActual);
 
 
 const ButtonizedImage = (props) => {
@@ -152,27 +161,27 @@ const Spinner = () => (
 );
 
 export const Picture = (props) => {
-    const {src, alt, className} = props;
+    const {src, alt, className, onLoad} = props;
     const srcSet = {
-        tiny: composePathBySize({path: src, size: PHOTOS_SIZES.tiny}),
         small: composePathBySize({path: src, size: PHOTOS_SIZES.small}),
         medium: composePathBySize({path: src, size: PHOTOS_SIZES.medium}),
         large: composePathBySize({path: src, size: PHOTOS_SIZES.large}),
     };
 
-    // {/*<div className={imageStyles['picture-container']} onClick={(event) => onClick(event)}>*/}
-    // {/*<div className={imageStyles['picture-container']}>*/}
-    // {/*<div className={`${imageStyles['blurred-backing']}`} style={{backgroundImage: `url(${srcSet.tiny})`}}/>*/}
-    // </div>
+    console.log('Picture: ', src);
 
     return (
-        <div className={imageStyles['picture-container']}>
-            <picture>
+        <div className={`${imageStyles['picture-container']} ${className}`}>
+            {/*<picture onLoadStart={(event) => onLoadStart(event)} onLoad={(event) => onLoad(event)}>*/}
+            <picture onLoad={(event) => onLoad(event)}>
                 <source srcSet={srcSet.large} media={`(min-width: ${PHOTOS_WIEWPORT_THRESHOLDS.large}px)`}/>
                 <source srcSet={srcSet.medium} media={`(min-width: ${PHOTOS_WIEWPORT_THRESHOLDS.medium}px)`}/>
                 <source srcSet={srcSet.small}/>
-                <img className={`${className} ${imageStyles['image']} ${imageStyles['contained-picture']}`}
-                     src={srcSet.large} alt={alt}/>
+                <img
+                    className={`${imageStyles['image']} ${imageStyles['contained-picture']}`}
+                    src={srcSet.large}
+                    alt={alt}
+                />
             </picture>
         </div>
     );
@@ -191,5 +200,16 @@ export const composePathBySize = (params) => {
         )
         .join('/');
 };
+
+export function determinePhotoSizeByWindow() {
+    const windowWidth = window.innerWidth;
+    return Object.keys(PHOTOS_WIEWPORT_THRESHOLDS)
+        .filter(key => PHOTOS_WIEWPORT_THRESHOLDS[key] < windowWidth)
+        .reduce((acc, key) => {
+            if (acc.size < PHOTOS_WIEWPORT_THRESHOLDS[key]) return {key: key, size: PHOTOS_WIEWPORT_THRESHOLDS[key]};
+            return acc;
+        }, {key: '', size: -Infinity})
+        .key;
+}
 
 export default Image;
