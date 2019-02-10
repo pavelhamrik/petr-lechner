@@ -28,8 +28,10 @@ class Image extends Component {
                         offsetXMin={`${xmin}px`}
                         offsetXMax={`${xmax}px`}
                         slowerScrollRate={reverse}
-                        // styleInner={{height: '100%'}}
-                        // styleOuter={{height: '100%'}}
+                        // styleInner={{display: 'flex', alignItems: 'stretch'}}
+                        // styleOuter={{display: 'flex', alignItems: 'stretch'}}
+                        styleInner={{height: '100%'}}
+                        styleOuter={{height: '100%'}}
                     >
                         <CustomProgressiveImage className={styleClassNames} {...attrs}/>
                     </Parallax>

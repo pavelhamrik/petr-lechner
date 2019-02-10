@@ -90,7 +90,6 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='medium-6' className='item-stretch'>
                         <Image
-                            // className='image-full-height'
                             src='/static/photos/medium/rodinny-dum-1-8421.jpg'
                             alt='[img]'
                             parallax={{ymin: -24, ymax: 24, color: COLORS.primary, reverse: false}}
@@ -155,8 +154,8 @@ class RodinnyDumBrno extends Component {
                         />
                     </GridItem>
 
-                    <GridItem width='medium-6'>
-                    {/*<GridItem width='medium-6' className='item-stretch'>*/}
+                    {/*<GridItem width='medium-6'>*/}
+                    <GridItem width='medium-6' className='item-stretch'>
                         <Image
                             src='/static/photos/medium/rodinny-dum-1-8446.jpg'
                             alt='[img]'

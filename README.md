@@ -28,6 +28,9 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Prefetch for links
 - [x] Prep photos
 - [x] Grid max width
+- [x] Perfect grid photo sizing
+- [ ] Test in IE?
+- [ ] Lightbox: preserve scroll position on opening/closing
 
 ### Pages
 
@@ -41,16 +44,15 @@ A web presentation for Petr Lechner, an exceptional architect
 - [ ] Project: 7. Fichtel
 - [x] Contact
 - [x] Biography
-- [ ] Error page (incl. Google Analytics)
+- [x] Error page (incl. Google Analytics)
 
 ### Up next
 
-- [ ] Perfect grid photo sizing
-
-### Later
 - [ ] Get copy, data from Petr
+
+### Content-dependent
+
 - [ ] Publish copy
-- [ ] Lightbox: preserve scroll position on opening/closing
-- [ ] Test in IE?
+- [ ] Arrange for DNS
 - [ ] SEO test
 - [ ] Google sitemap

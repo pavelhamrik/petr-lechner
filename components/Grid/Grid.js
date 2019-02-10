@@ -14,14 +14,13 @@ const Grid = (props) => {
 
 const GridItem = (props) => {
     const {className = '', children, width = '', offset = '', ...attrs} = props;
-    // const classNames = className.split(' ').concat(['item']).map(item => gridStyles[item] || item).join(' ');
+    const classNames = className.split(' ').concat(['item']).map(item => gridStyles[item] || item).join(' ');
     const widthGridStyles = width.split(' ').map(item => gridStyles[item]).join(' ');
+
     const offsetGridStyles = offset.split(' ').map(item => gridStyles[`offset-${item}`]).join(' ');
 
-    /*<div className={`${classNames} ${widthGridStyles} ${offsetGridStyles}`} {...attrs}>*/
-
     return (
-        <div className={`${className} ${gridStyles.item} ${widthGridStyles} ${offsetGridStyles}`} {...attrs}>
+        <div className={`${classNames} ${widthGridStyles} ${offsetGridStyles}`} {...attrs}>
             {children}
         </div>
     );
