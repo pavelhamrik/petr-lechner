@@ -6,13 +6,14 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import layoutStyles from './Layout.scss';
 import {connect} from 'react-redux';
-import {setMenuState} from '../../store/simpleActions';
+import {setLightboxState, setMenuState} from '../../store/simpleActions';
 import Lightbox from '../Lightbox/Lightbox';
 
 class Layout extends Component {
     componentDidMount() {
         ReactGA.pageview(window.location.pathname + window.location.search);
-        this.props.setMenuState({open: false})
+        this.props.setMenuState({open: false});
+        this.props.setLightboxState({open: false, currentImgIdx: -1});
     }
 
     render() {
@@ -40,6 +41,9 @@ const mapDispatchToProps = dispatch => {
     return {
         setMenuState: (payload) => {
             dispatch(setMenuState(payload));
+        },
+        setLightboxState: (payload) => {
+            dispatch(setLightboxState(payload));
         },
     }
 };

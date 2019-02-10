@@ -11,7 +11,7 @@ $grid-template-columns: unquote($grid-template-columns);
 
 .grid {
     margin: 0 auto;
-    //max-width: $grid-max-width;
+    max-width: $grid-max-width;
     width: 100%;
 
     // column span
@@ -74,6 +74,11 @@ $alignments: (normal, stretch, center, start, end);
     //        padding-right: $responsive-gap;
     //    }
     //}
+}
+
+.item-stretch {
+    display: flex;
+    align-items: stretch;
 }
 
 @each $screen, $size in $breakpoints {

@@ -28,6 +28,8 @@ class Image extends Component {
                         offsetXMin={`${xmin}px`}
                         offsetXMax={`${xmax}px`}
                         slowerScrollRate={reverse}
+                        // styleInner={{height: '100%'}}
+                        // styleOuter={{height: '100%'}}
                     >
                         <CustomProgressiveImage className={styleClassNames} {...attrs}/>
                     </Parallax>
@@ -115,7 +117,7 @@ const ButtonizedImage = (props) => {
     if (typeof lightboxHandler === 'function') {
         return (
             <Button onClick={lightboxHandler} className={`${classNames} button-lightbox`}>
-                <img className={className} src={src} alt={alt}/>
+                <ButtonizedImageGuts className={className} src={src} alt={alt}/>
             </Button>
         );
     }
@@ -123,7 +125,7 @@ const ButtonizedImage = (props) => {
     if (href !== '') {
         return (
             <Button href={href} className={classNames}>
-                <img className={className} src={src} alt={alt}/>
+                <ButtonizedImageGuts className={className} src={src} alt={alt}/>
             </Button>
         )
     }
@@ -132,6 +134,14 @@ const ButtonizedImage = (props) => {
         <img className={className} src={src} alt={alt}/>
     )
 };
+
+const ButtonizedImageGuts = (props) => (
+    <React.Fragment>
+        <span className={imageStyles['cover-format']} style={{backgroundImage: `url(${props.src})`}}>
+            <img className={`${props.className} ${imageStyles['cover-format-image']}`} src={props.src} alt={props.alt}/>
+        </span>
+    </React.Fragment>
+);
 
 export const Placeholder = (props) => {
     const {spinner = false, src = '', blurredPreview = true} = props;

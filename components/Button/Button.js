@@ -78,7 +78,7 @@ class Button extends Component {
             : styleClassNames;
 
         return (
-            <Link href={href}>
+            <Link href={href} prefetch>
                 <a
                     className={isActiveClassNames}
                     {...attrs}

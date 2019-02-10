@@ -4,6 +4,10 @@
 
 .header {
     box-shadow: 0 -0.0625rem 0 $border-gray;
+    //@include section(1rem);
+}
+
+.header-content {
     @include section(1rem);
 }
 

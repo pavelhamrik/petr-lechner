@@ -21,7 +21,7 @@ class RodinnyDumBrno extends Component {
     render() {
         return (
             <Layout title={`Rodinný dům Brno | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
-                <Grid className={sections['main-section']}>
+                <Grid className={sections['main-section']} align='stretch'>
                     <GridItem width='medium-8' offset='medium-2'>
                         <Heading level={1}>Rodinný dům Brno</Heading>
                         <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě
@@ -48,7 +48,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='medium-11 large-10 huge-9' offset='medium-1 large-2'>
                         <Image
-                            src='/static/photos/large/kouril-8416.jpg'
+                            src='/static/photos/large/rodinny-dum-1-8416.jpg'
                             alt='[img]'
                             parallax={{xmin: -64}}
                             lightbox={true}
@@ -57,7 +57,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8412.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8412.jpg'
                             lt='[img]'
                             parallax={{ymin: -24, ymax: 24, reverse: false}}
                             lightbox={true}
@@ -66,7 +66,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8414.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8414.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -74,7 +74,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='medium-6'>
                         <Image
-                            src='/static/photos/medium/kouril-8419.jpg'
+                            src='/static/photos/medium/rodinny-dum-1-8419.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -82,15 +82,16 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/medium/kouril-8425.jpg'
+                            src='/static/photos/medium/rodinny-dum-1-8425.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
                     </GridItem>
 
-                    <GridItem width='medium-6'>
+                    <GridItem width='medium-6' className='item-stretch'>
                         <Image
-                            src='/static/photos/medium/kouril-8421.jpg'
+                            // className='image-full-height'
+                            src='/static/photos/medium/rodinny-dum-1-8421.jpg'
                             alt='[img]'
                             parallax={{ymin: -24, ymax: 24, color: COLORS.primary, reverse: false}}
                             lightbox={true}
@@ -99,14 +100,14 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8431.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8431.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
                     </GridItem>
                     <GridItem width='medium-6'>
                         <Image
-                            src='/static/photos/medium/kouril-8435.jpg'
+                            src='/static/photos/medium/rodinny-dum-1-8435.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -122,7 +123,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8439.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8439.jpg'
                             alt='[img]'
                             parallax={{ymin: -48, ymax: 48, reverse: false}}
                             lightbox={true}
@@ -139,7 +140,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8440.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8440.jpg'
                             alt='[img]'
                             parallax={{ymin: -24, ymax: 24}}
                             lightbox={true}
@@ -148,15 +149,16 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/medium/kouril-8445.jpg'
+                            src='/static/photos/medium/rodinny-dum-1-8445.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
                     </GridItem>
 
                     <GridItem width='medium-6'>
+                    {/*<GridItem width='medium-6' className='item-stretch'>*/}
                         <Image
-                            src='/static/photos/medium/kouril-8446.jpg'
+                            src='/static/photos/medium/rodinny-dum-1-8446.jpg'
                             alt='[img]'
                             parallax={{xmin: -16, xmax: 24, color: COLORS.primary}}
                             lightbox={true}
@@ -165,7 +167,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8451.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8451.jpg'
                             alt='[img]'
                             parallax={{ymin: -16, ymax: 16, color: COLORS.primary, reverse: false}}
                             lightbox={true}
@@ -174,7 +176,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8453.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8453.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -182,7 +184,7 @@ class RodinnyDumBrno extends Component {
 
                     <GridItem width='small-6 medium-3'>
                         <Image
-                            src='/static/photos/small/kouril-8455.jpg'
+                            src='/static/photos/small/rodinny-dum-1-8455.jpg'
                             alt='[img]'
                             parallax={{ymin: -16, ymax: 16}}
                             lightbox={true}
@@ -204,9 +206,9 @@ class RodinnyDumBrno extends Component {
                 </Grid>
 
                 <NextPageBar>
-                    <Heading level={2}>Bytový dům tam a tam</Heading>
+                    <Heading level={2}>Rodinný dům 2</Heading>
                     <p>
-                        <Button href='/projekty/dalsi/'>Další projekt &rarr;</Button>
+                        <Button href='/projekty/rodinny-dum-2'>Další projekt &rarr;</Button>
                     </p>
                 </NextPageBar>
             </Layout>

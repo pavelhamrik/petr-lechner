@@ -10,13 +10,10 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Cookies message
 - [x] Parallax effect
 - [x] Base layout
-- [x] Contact page
-- [x] CV page
 - [x] Typography
 - [x] Text brick component
 - [x] Next project section
 - [x] Footer content
-- [x] Home page
 - [x] Traversable headings and thumbnails (for home)
 - [x] Image loading spinners
 - [x] Order headlines and images on home
@@ -28,15 +25,32 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Lightbox: preload
 - [x] Lightbox: preload respects direction
 - [x] Ask Mr. Choholaty for last photo versions
-- [ ] Test in IE?
+- [x] Prefetch for links
+- [x] Prep photos
+- [x] Grid max width
 
+### Pages
 
-### Today
-- [ ] Error page + Google Analytics on it
+- [x] Home (all projects)
+- [x] Project: 1. Kouril
+- [ ] Project: 2. Tomeckova
+- [ ] Project: 3. Lechner
+- [ ] Project: 4. Fait
+- [ ] Project: 5. Pinkas
+- [ ] Project: 6. Kozak
+- [ ] Project: 7. Fichtel
+- [x] Contact
+- [x] Biography
+- [ ] Error page (incl. Google Analytics)
+
+### Up next
+
 - [ ] Perfect grid photo sizing
-- [ ] 1 additional project
-- [ ] 1 additional project
 
 ### Later
 - [ ] Get copy, data from Petr
+- [ ] Publish copy
+- [ ] Lightbox: preserve scroll position on opening/closing
+- [ ] Test in IE?
 - [ ] SEO test
+- [ ] Google sitemap

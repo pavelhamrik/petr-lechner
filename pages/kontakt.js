@@ -17,12 +17,12 @@ class Index extends Component {
         return (
             <Layout title={`Kontakt | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
                 <Grid className={sections['main-section']}>
-                    <GridItem width='medium-8 large-6 huge-4' offset='medium-2 large-3 huge-4'>
+                    <GridItem width='medium-8 large-4' offset='medium-2 large-4'>
                         <Heading level={1}>Kontakt</Heading>
                         <p>[S čím se mi ozvat?]</p>
                     </GridItem>
 
-                    <GridItem width='medium-8 large-6 huge-4' offset='medium-2 large-3 huge-4'>
+                    <GridItem width='medium-8 large-4' offset='medium-2 large-4'>
                         <p><strong>Akad. Arch. Petr Lechner</strong></p>
                         <p>
                             <Button href={TEL_URL} className='button-link button-arrowed'>{PHONE}</Button>
