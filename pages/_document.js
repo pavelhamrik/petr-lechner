@@ -11,6 +11,7 @@ class MyDocument extends Document {
             <html>
             <Head>
                 <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
+                <meta name="google-site-verification" content="2uwI0FTWIuk-bAh7Pbgj1h5QXEozhdSiGRhHU-ggENk" />
                 <link rel="icon" type="image/png" href="/static/images/favicon-underscore@2x.png" sizes='32x32'/>
             </Head>
             <body>
