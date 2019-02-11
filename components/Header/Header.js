@@ -4,7 +4,6 @@ import {Grid, GridItem} from '../Grid/Grid';
 import Menu from '../Menu/Menu';
 import headerStyles from './Header.scss';
 import flex from '../../styles/generic/_flex.scss';
-import sections from '../../styles/generic/_sections.scss';
 
 const Header = (props) => {
     const {className = '', ...attrs} = props;

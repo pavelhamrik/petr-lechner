@@ -38,19 +38,6 @@ $grid-template-columns: unquote($grid-template-columns);
     grid-gap: $grid-gap;
 
     @include responsive-attr(grid-gap, $grid-gap, 0.25);
-
-    //margin-left: -($grid-gap / 2);
-    //margin-right: -($grid-gap / 2);
-    //
-    //$grid-gap-iterator: 1;
-    //@each $screen, $size in $breakpoints {
-    //    $responsive-gap: $grid-gap * $grid-gap-iterator / 2;
-    //    $grid-gap-iterator: $grid-gap-iterator + 0.25;
-    //    @include breakpoint(#{$screen}) {
-    //        margin-left: -$responsive-gap;
-    //        margin-right: -$responsive-gap;
-    //    }
-    //}
 }
 
 $alignments: (normal, stretch, center, start, end);
@@ -62,23 +49,6 @@ $alignments: (normal, stretch, center, start, end);
 
 .item {
     grid-column: span $grid-columns;
-    //padding-left: $grid-gap / 2;
-    //padding-right: $grid-gap / 2;
-
-    //$grid-gap-iterator: 1;
-    //@each $screen, $size in $breakpoints {
-    //    $responsive-gap: $grid-gap * $grid-gap-iterator / 2;
-    //    $grid-gap-iterator: $grid-gap-iterator + 0.25;
-    //    @include breakpoint(#{$screen}) {
-    //        padding-left: $responsive-gap;
-    //        padding-right: $responsive-gap;
-    //    }
-    //}
-}
-
-.item-stretch {
-    display: flex;
-    align-items: stretch;
 }
 
 @each $screen, $size in $breakpoints {

@@ -82,7 +82,10 @@ class ImageActual extends Component {
 
         return (
             <ButtonizedImage
-                className={`${className} ${lightboxClassName}`} src={src} alt={alt} href={href}
+                className={`${className} ${lightboxClassName}`}
+                src={src}
+                alt={alt}
+                href={href}
                 lightboxHandler={lightboxHandler}
             />
         );
@@ -111,7 +114,6 @@ const mapDispatchToProps = dispatch => {
 
 const ImageActualConnected = connect(mapStateToProps, mapDispatchToProps)(ImageActual);
 
-
 const ButtonizedImage = (props) => {
     const {className, src, alt, href = '', lightboxHandler} = props;
     const classNames = `${className} button-image`;
@@ -139,8 +141,8 @@ const ButtonizedImage = (props) => {
 
 const ButtonizedImageGuts = (props) => (
     <React.Fragment>
-        <span className={imageStyles['cover-format']} style={{backgroundImage: `url(${props.src})`}}>
-            <img className={`${props.className} ${imageStyles['cover-format-image']}`} src={props.src} alt={props.alt}/>
+        <span className={imageStyles['cover-formatted-cover']} style={{backgroundImage: `url(${props.src})`}}>
+            <img className={`${props.className} ${imageStyles['cover-formatted-image']}`} src={props.src} alt={props.alt}/>
         </span>
     </React.Fragment>
 );
@@ -158,7 +160,6 @@ export const Placeholder = (props) => {
                 tinyImageSrc
                     ? <div style={{backgroundImage: `url(${tinyImageSrc})`}}
                            className={imageStyles['blurred-backing']}/>
-                    // ? <img src={tinyImageSrc} alt='' className={imageStyles['blurred-backing']}/>
                     : null
             }
             {spinner ? <Spinner/> : null}

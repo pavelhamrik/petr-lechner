@@ -22,10 +22,10 @@ class RodinnyDumBrno extends Component {
         return (
             <Layout title={`Rodinný dům 2 | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
                 <Grid className={sections['main-section']} align='stretch'>
-                    <GridItem width='medium-8' offset='medium-2'>
+                    <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
                         <Heading level={1}>Rodinný dům 2</Heading>
-                        <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě
-                            území, zimě v nory. Si září jim úřadu nenavrtávat.</p>
+                        <p>Došel jsem k našemu baráku a vytáh jsem z kapsy klíč. Ještě jsem se ze zvyku podíval na
+                            oblohu a pak na siluetu zámku. </p>
                         <Grid className={`${margins['margin-top-2']} ${margins['margin-bottom-1']}`}>
                             <GridItem width='small-3'>
                                 <dt>Typ</dt>
@@ -55,9 +55,10 @@ class RodinnyDumBrno extends Component {
                         />
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'>
+                    <GridItem width='medium-6'>
                         <Image
-                            src='/static/photos/small/rodinny-dum-2-8458.jpg'
+                            className='cover-formatted'
+                            src='/static/photos/small/rodinny-dum-2-8485.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -80,41 +81,63 @@ class RodinnyDumBrno extends Component {
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
-                        <Image
-                            src='/static/photos/small/rodinny-dum-2-8470.jpg'
-                            alt='[img]'
-                            lightbox={true}
-                        />
+                        <Brick className='brick-right'>
+                            <BrickText>Sáhl jsem do kapsy a nahmatal jsem zbytek rohlíku od svačiny. Hodil jsem ho dolů
+                                Bonzovi.</BrickText>
+                            <BrickLabel>Popisek</BrickLabel>
+                        </Brick>
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
                         <Image
+                            className='cover-formatted'
                             src='/static/photos/small/rodinny-dum-2-8478.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'>
+                    <GridItem width='medium-6'>
                         <Image
-                            src='/static/photos/small/rodinny-dum-2-8480.jpg'
+                            className='cover-formatted'
+                            src='/static/photos/small/rodinny-dum-2-8470.jpg'
+                            alt='[img]'
+                            parallax={{xmin: -16, xmax: 16, color: COLORS.primary, reverse: true}}
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
+                        <p>Zvedl jsem hlavu a podíval jsem se na město. Leželo v údolí, tmavé a tiché, věž
+                            československého kostela se vytahovala nad vilky na jeho okraji a jenom sem tam zářilo
+                            osamělé okno.</p>
+                        <p>V Port Arthuru ještě svítili. Představil jsem si starého Wintra s jeho ospalýma očima za
+                            pultem. Sedí a vedle něj kape pípa, pomalu a pravidelně.</p>
+                    </GridItem>
+
+                    <GridItem width='medium-6'>
+                        <Image
+                            className='cover-formatted'
+                            src='/static/photos/small/rodinny-dum-2-8458.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'>
-                        <Image
-                            src='/static/photos/small/rodinny-dum-2-8485.jpg'
-                            alt='[img]'
-                            lightbox={true}
-                        />
-                    </GridItem>
-
-                    <GridItem width='small-6 medium-3'>
+                    <GridItem width='medium-6'>
                         <Image
                             src='/static/photos/small/rodinny-dum-2-8487.jpg'
                             alt='[img]'
+                            // parallax={{xmin: -16, xmax: 16, color: COLORS.primary, reverse: true}}
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='medium-6' offset='medium-3'>
+                        <Image
+                            src='/static/photos/small/rodinny-dum-2-8480.jpg'
+                            alt='[img]'
+                            parallax={{xmin: -32, xmax: 32, reverse: true}}
                             lightbox={true}
                         />
                     </GridItem>
@@ -122,14 +145,6 @@ class RodinnyDumBrno extends Component {
                     <GridItem width='small-6 medium-3'>
                         <Image
                             src='/static/photos/small/rodinny-dum-2-8494.jpg'
-                            alt='[img]'
-                            lightbox={true}
-                        />
-                    </GridItem>
-
-                    <GridItem width='small-6 medium-3'>
-                        <Image
-                            src='/static/photos/small/rodinny-dum-2-8506.jpg'
                             alt='[img]'
                             lightbox={true}
                         />
@@ -151,41 +166,40 @@ class RodinnyDumBrno extends Component {
                         />
                     </GridItem>
 
-                    <GridItem width='small-6 medium-3'>
+                    <GridItem width='medium-6'>
+                        <Image
+                            src='/static/photos/small/rodinny-dum-2-8506.jpg'
+                            alt='[img]'
+                            parallax={{ymin: -16, ymax: 16, color: COLORS.primary, reverse: false}}
+                            lightbox={true}
+                        />
+                    </GridItem>
+
+                    <GridItem width='medium-9 large-6'>
                         <Image
                             src='/static/photos/small/rodinny-dum-2-8561.jpg'
                             alt='[img]'
+                            parallax={{xmin: -16, xmax: 16, reverse: false}}
                             lightbox={true}
                         />
                     </GridItem>
 
                     <GridItem width='small-6 medium-3'>
                         <Brick>
-                            <BrickText>Hluboko dálný bažinách ty hlavním zámořské září zadře tvary pozdního, věc zemím
-                                masivní prokázat bestie.</BrickText>
-                            <BrickLabel>Originální koncepce</BrickLabel>
+                            <BrickText>Váženému panu dr. Šabatovi, okresnímu hejtmanovi v Kostelci.</BrickText>
+                            <BrickLabel>A budou si v tom číst</BrickLabel>
                         </Brick>
                     </GridItem>
 
                     <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
-                        <p>Kolem mj. 500 světlo domnívám odrážení evropských látky, telefonu dánský z odehrálo, svítí
-                            ráj od právě češi přesunout. Začnou pár znám posílat terénních ně států hlasů, chemickým
-                            souostroví monarchové v němž let oteplováním ony místním účastnil upomínají, klima byla v
-                            množit sociální jak obstaral.</p>
-                        <p>Dálný představ prvních. Koráby těm známá podléhají už mapuje to zdrojem?</p>
-                    </GridItem>
-
-                    <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
-                        <p>Roli spolufinancuje radu podpis okolností ty světový ně neděli s šíří stěn zůstávají horečky
-                            ně procesech. Charismatický nepravděpodobné mě nikdo tmavou pestis deprimovaná, vědce svítí
-                            navíc dvojice.</p>
-                        <p>Dobře ženy cest 80 ℃ tát u sněhu kombinézy stroj, oboru si vkusné zaměnili. Jsme vaše, zda
-                            stánky.</p>
-                        <p>Houby sněhu, dost zjistí tj. komunikaci podmínkách převýšení 2005 ne ke. Obdivují zevnějšku
-                            dané i proplujete severoamerickými samé měly nakažený klientela naše že neuspořádanost
-                            obejít extrémní gumových formovat trojcípou.</p>
-                        <p>Osamění navzájem z nálada dávej mi lety tohle bezchybně EU zdi běžné. Ano či zdát účelné,
-                            dne modré horninách, já zahájení dlouhý nacházeli půlkilometrová šimpanzi.</p>
+                        <p>Zase jsem pohlédl na město. Za ním, na úpatí kopců, začínal les a z něho rostl holý vrcholek
+                            Černé hory s chatou nahoře. Teď byla tmavá. Vzpomněl jsem si na nedělní odpoledne, která
+                            jsme tam za války probili při kartách a čaji a biliáru.</p>
+                        <p>To už bylo pryč. To už bylo všechno pryč. Teď začínalo něco nového. Zvrátil jsem hlavu nazad
+                            a uviděl jsem širokou, vypouklou oblohu s hvězdama. Mléčná dráha se táhla napříč přes ni a
+                            nehýbala se.</p>
+                        <p>Nad městem viselo šumivé jarní ticho. Nevypadalo to na revoluci. Ale revoluce měla být. A
+                            musela být.</p>
                     </GridItem>
                 </Grid>
 

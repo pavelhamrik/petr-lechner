@@ -16,7 +16,7 @@ ReactGA.initialize('UA-9799491-13');
 const reduxLogger = createLogger({
     diff: true,
     collapsed: (getState, action, logEntry) => !logEntry.error,
-    // predicate: (getState, action) => action.type !== SET_PASSED_TICKS
+    predicate: (getState, action) => typeof window !== 'undefined'
 });
 
 // const makeStore = (initialState, options) => {

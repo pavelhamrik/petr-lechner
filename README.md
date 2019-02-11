@@ -29,6 +29,7 @@ A web presentation for Petr Lechner, an exceptional architect
 - [x] Prep photos
 - [x] Grid max width
 - [x] Perfect grid photo sizing
+- [ ] https://github.com/Vestride/Shuffle ?
 - [ ] Test in IE?
 - [ ] Lightbox: preserve scroll position on opening/closing
 
@@ -36,7 +37,7 @@ A web presentation for Petr Lechner, an exceptional architect
 
 - [x] Home (all projects)
 - [x] Project: 1. Kouril
-- [ ] Project: 2. Tomeckova
+- [x] Project: 2. Tomeckova
 - [ ] Project: 3. Lechner
 - [ ] Project: 4. Fait
 - [ ] Project: 5. Pinkas

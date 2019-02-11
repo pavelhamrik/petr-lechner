@@ -22,7 +22,7 @@ class RodinnyDumBrno extends Component {
         return (
             <Layout title={`Rodinný dům Brno | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
                 <Grid className={sections['main-section']} align='stretch'>
-                    <GridItem width='medium-8' offset='medium-2'>
+                    <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
                         <Heading level={1}>Rodinný dům Brno</Heading>
                         <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě
                             území, zimě v nory. Si září jim úřadu nenavrtávat.</p>
@@ -88,8 +88,9 @@ class RodinnyDumBrno extends Component {
                         />
                     </GridItem>
 
-                    <GridItem width='medium-6' className='item-stretch'>
+                    <GridItem width='medium-6'>
                         <Image
+                            className='cover-formatted'
                             src='/static/photos/medium/rodinny-dum-1-8421.jpg'
                             alt='[img]'
                             parallax={{ymin: -24, ymax: 24, color: COLORS.primary, reverse: false}}
@@ -154,9 +155,9 @@ class RodinnyDumBrno extends Component {
                         />
                     </GridItem>
 
-                    {/*<GridItem width='medium-6'>*/}
-                    <GridItem width='medium-6' className='item-stretch'>
+                    <GridItem width='medium-6'>
                         <Image
+                            className='cover-formatted'
                             src='/static/photos/medium/rodinny-dum-1-8446.jpg'
                             alt='[img]'
                             parallax={{xmin: -16, xmax: 24, color: COLORS.primary}}

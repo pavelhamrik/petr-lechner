@@ -1,10 +1,8 @@
 import React from 'react';
 import {Grid, GridItem} from '../Grid/Grid';
-import Button from '../Button/Button';
 import {EMAIL, MAILTO_URL, PHONE, TEL_URL} from '../../constants/constants';
 import footerStyles from './Footer.scss';
-import sections from '../../styles/generic/_sections.scss';
-
+import Button from '../Button/Button';
 
 const Footer = (props) => {
     const {className = '', ...attrs} = props;
@@ -16,7 +14,7 @@ const Footer = (props) => {
 
     return (
         <footer className={styleClassNames} {...attrs}>
-            <Grid className={sections['section']}>
+            <Grid className={footerStyles['footer-content']}>
                 <GridItem width='medium-4'>
                     <Button href='/' className='button-link'>
                         <div className={footerStyles.logo}/>

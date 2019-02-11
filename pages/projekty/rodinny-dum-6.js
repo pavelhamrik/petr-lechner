@@ -22,7 +22,7 @@ class RodinnyDumBrno extends Component {
         return (
             <Layout title={`Rodinný dům 6 | ${SITE_TITLE} • ${SITE_SUBTITLE}`}>
                 <Grid className={sections['main-section']} align='stretch'>
-                    <GridItem width='medium-8' offset='medium-2'>
+                    <GridItem width='medium-10 large-8 huge-6' offset='medium-1 large-2 huge-3'>
                         <Heading level={1}>Rodinný dům 6</Heading>
                         <p>Produkují ráj formy premiéru navštívíte pole opravdu vazeb semena z v rovnosti, dal nový mě
                             území, zimě v nory. Si září jim úřadu nenavrtávat.</p>
